@@ -2,6 +2,8 @@
 
 Upstream: https://github.com/rohitg00/ai-engineering-from-scratch (MIT, Copyright 2026 Rohit Ghumare). Audited at commit `1a8c4fd` (2026-10-15).
 
+This skill folder also holds `llms.txt` and `llms/phase-NN.txt`: llmstxt.org-style indexes with direct lesson links, for agents that only have URLs. Ignore them when the skill is loaded; the phase tables in `references/lessons/` carry the same audit status.
+
 ## Contents
 - Layout
 - Fetch a lesson or file on demand

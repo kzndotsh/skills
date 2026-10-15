@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Generate the repo-root llms.txt from each skill's SKILL.md frontmatter (llmstxt.org format).
 
-Usage: python3 scripts/gen_llms.py          write llms.txt and llms/<skill>/llms.txt
+Usage: python3 scripts/gen_llms.py          write llms.txt and skills/<skill>/llms.txt
        python3 scripts/gen_llms.py --check  exit 1 if any generated file is out of date
-The curriculum skill's index (llms/ai-engineering-from-scratch/) is written by that skill's build_index.py.
+The curriculum skill's index (skills/ai-engineering-from-scratch/llms.txt and llms/) is written by that skill's build_index.py.
 No dependencies.
 """
 import re
@@ -78,9 +78,9 @@ def build_all():
         "",
     ]
     for d, name, desc in skill_entries():
-        master.append(f"- [{name}]({RAW}/llms/{d.name}/llms.txt): {desc}")
+        master.append(f"- [{name}]({RAW}/skills/{d.name}/llms.txt): {desc}")
         if d.name not in CUSTOM:
-            files[f"llms/{d.name}/llms.txt"] = per_skill(d, name, desc)
+            files[f"skills/{d.name}/llms.txt"] = per_skill(d, name, desc)
     master += [
         "",
         "## Optional",
@@ -98,8 +98,8 @@ def main():
     if "--check" in sys.argv:
         stale = [rel for rel, text in files.items() if not (REPO / rel).is_file() or (REPO / rel).read_text() != text]
         for rel in CUSTOM:  # written by the skill's own script; only require that it exists
-            if not (REPO / "llms" / rel / "llms.txt").is_file():
-                stale.append(f"llms/{rel}/llms.txt")
+            if not (REPO / "skills" / rel / "llms.txt").is_file():
+                stale.append(f"skills/{rel}/llms.txt")
         if stale:
             print("out of date or missing:", ", ".join(stale), "- run python3 scripts/gen_llms.py")
             return 1
