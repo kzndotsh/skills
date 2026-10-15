@@ -191,6 +191,8 @@ def build_llms(repo, outdir, commit):
     top = ["# AI Engineering from Scratch: lesson index with audit status", "",
            f"> Index of the 542-lesson open curriculum rohitg00/ai-engineering-from-scratch (commit {commit}) with direct links per lesson and an audit status for each. {guard}", "",
            "Start with the trust guide, then open the phase you need. Each lesson link carries a label: WRONG, stale, weak, unverified, ok, clean or not audited.", "",
+           "## Skill", "",
+           f"- [SKILL.md]({OUR_RAW}/skills/ai-engineering-from-scratch/SKILL.md): entry point with the workflow and rules for answering from this curriculum", "",
            "## Read first", "",
            f"- [Trust guide]({skill_raw}/trust-guide.md): how far to believe each kind of content",
            f"- [Known errors]({skill_raw}/known-errors.md): verified errors and corrections", "",

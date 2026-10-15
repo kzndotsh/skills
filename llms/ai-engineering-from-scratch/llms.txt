@@ -4,6 +4,10 @@
 
 Start with the trust guide, then open the phase you need. Each lesson link carries a label: WRONG, stale, weak, unverified, ok, clean or not audited.
 
+## Skill
+
+- [SKILL.md](https://raw.githubusercontent.com/kzndotsh/skills/main/skills/ai-engineering-from-scratch/SKILL.md): entry point with the workflow and rules for answering from this curriculum
+
 ## Read first
 
 - [Trust guide](https://raw.githubusercontent.com/kzndotsh/skills/main/skills/ai-engineering-from-scratch/references/trust-guide.md): how far to believe each kind of content

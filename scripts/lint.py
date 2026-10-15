@@ -109,7 +109,7 @@ OUR_RAW = "https://raw.githubusercontent.com/kzndotsh/skills/main/"
 
 
 def lint_llms(repo):
-    """Check llmstxt.org structure, that links into this repo resolve, and that llms.txt is fresh."""
+    """Check llmstxt.org structure, that links into this repo resolve, and that generated llms files are fresh."""
     errors = []
     files = [f for f in [repo / "llms.txt", *sorted((repo / "llms").rglob("*.txt"))] if f.is_file()]
     for f in files:
@@ -132,11 +132,12 @@ def lint_llms(repo):
                 if url.startswith(OUR_RAW) and not (repo / url[len(OUR_RAW):]).exists():
                     errors.append(f"{rel}:{n}: link target not in this repo: {url[len(OUR_RAW):]}")
     gen = repo / "scripts" / "gen_llms.py"
-    if gen.is_file() and (repo / "llms.txt").is_file():
+    if gen.is_file():
         ns = {"__file__": str(gen), "__name__": "gen_llms"}
         exec(compile(gen.read_text(), str(gen), "exec"), ns)
-        if ns["build"]() != (repo / "llms.txt").read_text():
-            errors.append("llms.txt is out of date: run python3 scripts/gen_llms.py")
+        for rel, text in ns["build_all"]().items():
+            if not (repo / rel).is_file() or (repo / rel).read_text() != text:
+                errors.append(f"{rel} is missing or out of date: run python3 scripts/gen_llms.py")
     return errors, len(files)
 
 
