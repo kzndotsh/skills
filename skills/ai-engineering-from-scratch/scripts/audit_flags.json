@@ -1,0 +1,295 @@
+{
+  "_comment": "Audit results (2026-10-15, upstream commit 1a8c4fd). Keys are PP/NN = phase number / lesson number. level: ok = claims checked and correct; wrong = verified error; stale = outdated; weak = flawed demo or thin; unverified = anecdote. Lessons not listed were NOT audited.",
+  "flags": {
+    "01/09": [
+      "ok",
+      "Formulas right; GPT-2 perplexity quoted as both ~30 and 50; MI-bias caveat missing"
+    ],
+    "01/15": [
+      "wrong",
+      "Advises Wilcoxon on 5 CV folds (min p=0.0625, can never reach 0.05); no code in Build It"
+    ],
+    "03/07": [
+      "wrong",
+      "Doc backward pass omits dropout mask; demo cannot overfit; 'conclusion' is hard-coded; GPT-3 tokens wrong"
+    ],
+    "03/12": [
+      "wrong",
+      "JIT benchmark lacks block_until_ready (bogus speedup); optax and PaLM claims wrong or unsourced"
+    ],
+    "05/10": [
+      "ok",
+      "Best sampled lesson; worked example verified by hand; cites lesson 09 numbers that don't exist"
+    ],
+    "05/21": [
+      "wrong",
+      "False claim that RAGAS/RAG evals use NLI; sample outputs invented"
+    ],
+    "07/08": [
+      "weak",
+      "Stub Build It, no cross-attention code, no quiz"
+    ],
+    "07/16": [
+      "ok",
+      "Speculative-decoding math correct; hardware (70B on one H100) and 'default everywhere' claims wrong"
+    ],
+    "10/02": [
+      "wrong",
+      "Several factual errors; without the regex package, non-ASCII text is silently dropped"
+    ],
+    "10/11": [
+      "wrong",
+      "Benchmark table fabricated; KV-cache and memory math wrong; simulated AWQ is a no-op"
+    ],
+    "11/04": [
+      "stale",
+      "Gemini Embedding 2 price wrong ($0.20/M, not $0.15)"
+    ],
+    "11/05": [
+      "stale",
+      "Context windows wrong or outdated (Opus 4.7 1M, Gemini 3 Pro 1M)"
+    ],
+    "11/08": [
+      "wrong",
+      "LoRA target-module advice contradicts QLoRA paper; 'NF4' is uniform int4; memory math wrong"
+    ],
+    "11/09": [
+      "stale",
+      "Treats Opus 4.6 and GPT-5 as the frontier/judge models"
+    ],
+    "11/10": [
+      "stale",
+      "Treats Opus 4.6 and GPT-5 as the frontier models"
+    ],
+    "11/11": [
+      "wrong",
+      "Prices wrong: Opus 4.7 is $5/$25, GPT-5 $1.25/$10, Gemini 3 Pro about $2/$12"
+    ],
+    "11/14": [
+      "ok",
+      "MCP content matched the 2026-07-28 spec"
+    ],
+    "11/15": [
+      "stale",
+      "Cache minimums and OpenAI 50% discount outdated (GPT-5 cached is 90% off)"
+    ],
+    "11/17": [
+      "weak",
+      "Mixes AutoGen 0.2/0.4 APIs; AutoGen now in maintenance mode; dangling cross-refs; empty quiz explanations"
+    ],
+    "13/01": [
+      "wrong",
+      "Says parallel tool use is opt-in on Anthropic; it is the default"
+    ],
+    "13/02": [
+      "stale",
+      "Says Anthropic has no strict-mode flag; strict: true exists"
+    ],
+    "13/06": [
+      "ok",
+      "MCP stateless details matched official spec and changelog"
+    ],
+    "13/07": [
+      "ok",
+      "server/discover, ttlMs, cacheScope matched spec"
+    ],
+    "13/08": [
+      "ok",
+      "Matched spec where checked"
+    ],
+    "13/09": [
+      "ok",
+      "Error codes and per-request _meta matched spec"
+    ],
+    "13/10": [
+      "ok",
+      "Matched spec where checked"
+    ],
+    "13/11": [
+      "ok",
+      "Deprecations and MRTR matched spec"
+    ],
+    "13/12": [
+      "ok",
+      "MRTR input_required matched spec"
+    ],
+    "13/20": [
+      "wrong",
+      "Calls OTel GenAI semantic conventions stable; they are still in Development"
+    ],
+    "13/23": [
+      "ok",
+      "Tasks-extension changes matched spec (tasks/cancel unchecked)"
+    ],
+    "14/01": [
+      "stale",
+      "ReAct citation correct; lists AutoGen v0.4 as a current harness"
+    ],
+    "14/02": [
+      "ok",
+      "ReWOO and Plan-and-Act citations verified"
+    ],
+    "14/03": [
+      "wrong",
+      "Reflexion '130% improvement' is wrong: paper reports +22% absolute"
+    ],
+    "14/04": [
+      "ok",
+      "ToT and LATS citations and headline numbers verified"
+    ],
+    "14/05": [
+      "ok",
+      "Self-Refine and CRITIC citations verified"
+    ],
+    "14/06": [
+      "ok",
+      "Toolformer and BFCL V4 weights verified"
+    ],
+    "14/07": [
+      "ok",
+      "MemGPT citation verified"
+    ],
+    "14/08": [
+      "ok",
+      "MemGPT citation verified"
+    ],
+    "14/09": [
+      "wrong",
+      "Mem0 2026 docs numbers attributed to the 2025 paper"
+    ],
+    "14/10": [
+      "ok",
+      "Voyager citation and headline numbers verified"
+    ],
+    "14/17": [
+      "weak",
+      "No real Claude Agent SDK code; toy harness has no LLM; 'parallel' subagents run sequentially"
+    ],
+    "14/28": [
+      "weak",
+      "Every 'pattern' reuses one keyword classifier; printed conclusions are hard-coded"
+    ],
+    "14/32": [
+      "unverified",
+      "ICLR 2026 AMBIG-SWE numbers not found in the paper"
+    ],
+    "14/36": [
+      "unverified",
+      "Blog-sourced statistics"
+    ],
+    "14/38": [
+      "ok",
+      "arXiv 2604.01483 is real but a narrow finance-compliance fit"
+    ],
+    "14/39": [
+      "unverified",
+      "Cloudflare figures only via secondary coverage; other stats anecdotal"
+    ],
+    "15/01": [
+      "stale",
+      "METR doubling time outdated (about 4 months per TH1.1, not 7); Opus 4.6 two generations behind"
+    ],
+    "15/03": [
+      "ok",
+      "AlphaEvolve citation and numbers verified"
+    ],
+    "15/04": [
+      "ok",
+      "Darwin Godel Machine numbers verified"
+    ],
+    "15/05": [
+      "ok",
+      "AI Scientist-v2 and Beel et al. verified"
+    ],
+    "15/07": [
+      "ok",
+      "RSP v3.0 correct; workshop dates imprecise"
+    ],
+    "15/08": [
+      "stale",
+      "DeepMind Frontier Safety Framework v3 outdated (v3.1 published April 2026)"
+    ],
+    "16/04": [
+      "weak",
+      "Three orchestrators produce identical output; no quiz; 'four primitives' oversimplified"
+    ],
+    "16/11": [
+      "ok",
+      "Accurate on Swarm and Agents SDK handoffs; router is keyword-based; no quiz"
+    ],
+    "17/01": [
+      "stale",
+      "Model examples outdated (Claude 3.7, Gemini 2.5, GPT-5 as current)"
+    ],
+    "17/02": [
+      "stale",
+      "Fireworks valuation outdated ($4B vs about $17.5B)"
+    ],
+    "17/03": [
+      "wrong",
+      "'DeepSeek-V3 67B' should be 671B total / 37B active"
+    ],
+    "17/04": [
+      "stale",
+      "vLLM v0.18.0 feature matrix is old"
+    ],
+    "17/06": [
+      "ok",
+      "SGLang citation verified"
+    ],
+    "17/07": [
+      "wrong",
+      "'7x' H100 vs GB200 comparison misreads SemiAnalysis (the $0.012 is GB200 vs MI325X)"
+    ],
+    "17/09": [
+      "ok",
+      "AWQ and GPTQ citations verified"
+    ],
+    "17/10": [
+      "ok",
+      "ServerlessLLM claim verified"
+    ],
+    "18/04": [
+      "weak",
+      "Real arXiv cites, but Science DOI looks fabricated and the toy simulator contradicts the claim"
+    ],
+    "18/22": [
+      "wrong",
+      "Misattributed paper; epsilon proxy never reaches the claimed range; no canary code despite the doc"
+    ],
+    "13/21": [
+      "ok",
+      "Portkey gateway open-sourced March 2026 verified"
+    ],
+    "13/24": [
+      "ok",
+      "Skill catalog entry of about 100 tokens matches the Agent Skills spec"
+    ],
+    "13/27": [
+      "ok",
+      "GitSkills dataset figures verified"
+    ]
+  },
+  "phase_trust": {
+    "00": "Not audited.",
+    "01": "2 lessons sampled: one sound, one with a statistical-advice error.",
+    "02": "Not audited.",
+    "03": "2 lessons sampled, both flawed (buggy doc code, bogus benchmark).",
+    "04": "Not audited.",
+    "05": "2 lessons sampled: attention lesson strong, NLI lesson has false claims.",
+    "06": "Not audited.",
+    "07": "2 lessons sampled: speculative-decoding math right, T5/BART is a stub.",
+    "08": "Not audited.",
+    "09": "Not audited.",
+    "10": "2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).",
+    "11": "Whole phase fact-checked: pricing, model and context-window numbers mostly wrong or stale; LoRA advice contradicts its source paper.",
+    "12": "Not audited.",
+    "13": "Claims swept in lessons 01-12 and 20-27; only lessons with an ok/WRONG/stale flag had specific claims verified. MCP lessons 06-12 and 23 matched the spec; lessons 13-19 and 28-45 were not audited. API comparisons (01-03) and OTel (20) have errors.",
+    "14": "Claims swept in lessons 01-10 and 30-40: paper citations reliable; 17 and 28 (sampled separately) are thin toys; 31-40 lean on unverifiable blog anecdotes. Lessons 11-29 mostly not audited.",
+    "15": "Lessons 01-08 fact-checked: mostly correct, some outdated vendor and benchmark status.",
+    "16": "2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.",
+    "17": "Lessons 01-10 fact-checked: weakest phase factually (wrong parameter count, misread benchmark, stale versions).",
+    "18": "2 lessons sampled: real citations but toy code that does not support the text; one misattribution.",
+    "19": "Not audited. Capstone projects; see repo-guide.md."
+  }
+}

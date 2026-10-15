@@ -39,9 +39,19 @@ def lint_skill(skill, repo):
         return errors
     text = skill_md.read_text()
     fm, body = parse_frontmatter(text)
+    fm_raw = {}
+    if fm is not None:
+        for line in re.match(r"---\n(.*?)\n---\n", text, re.S).group(1).splitlines():
+            kv = re.match(r"([A-Za-z_-]+):\s*(.*)", line)
+            if kv:
+                fm_raw[kv.group(1)] = kv.group(2).strip()
     if fm is None:
         err("SKILL.md has no frontmatter")
         return errors
+
+    for key, raw in fm_raw.items():
+        if raw[:1] not in "\"'|>[{" and (": " in raw or " #" in raw or raw.endswith(":")):
+            err(f"frontmatter {key}: unquoted value contains ': ' or ' #' (invalid YAML; reword or quote it)")
 
     name, desc = fm.get("name", ""), fm.get("description", "")
     if not name:

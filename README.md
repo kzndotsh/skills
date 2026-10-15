@@ -9,6 +9,7 @@ Agent skills for Claude Code and other agents that read `SKILL.md`. Each folder 
 | Skill | What it does |
 |---|---|
 | [prompt-engineering](skills/prompt-engineering/) | Audited knowledge base for writing and debugging LLM prompts: technique picker (few-shot, CoT, self-consistency, ReAct, RAG, chaining, PAL, ToT, Reflexion), agents and context engineering, reasoning-model prompting, prompt-injection defenses, model notes, and a prompt library. |
+| [ai-engineering-from-scratch](skills/ai-engineering-from-scratch/) | Navigator and trust guide for the AI Engineering from Scratch curriculum (542 lessons, 20 phases): a per-phase lesson index, learning routes, a glossary index, and an audit that flags which lessons are correct, stale, or flawed. |
 | [arctic-shift](skills/arctic-shift/) | Query archived Reddit posts, comments, threads, subreddits, and users through the free Arctic Shift API when reddit.com blocks automated access: endpoint picker, scoping rules, pagination, and failure modes. |
 
 ## Install

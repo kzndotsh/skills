@@ -5,12 +5,23 @@
     {
       "title": "Prompting",
       "description": "Writing, debugging, and hardening LLM prompts.",
-      "skills": ["prompt-engineering"]
+      "skills": [
+        "prompt-engineering"
+      ]
+    },
+    {
+      "title": "Learning",
+      "description": "Navigating and vetting curricula and course material.",
+      "skills": [
+        "ai-engineering-from-scratch"
+      ]
     },
     {
       "title": "Research",
       "description": "Pulling source material that is hard to reach directly.",
-      "skills": ["arctic-shift"]
+      "skills": [
+        "arctic-shift"
+      ]
     }
   ]
 }
