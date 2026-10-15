@@ -1,4 +1,4 @@
-# Phase 00: Setup And Tooling
+# Phase 00: Setup and Tooling
 
 Upstream commit `1a8c4fd`. 13 lessons. Path pattern: `phases/00-setup-and-tooling/<lesson>/docs/en.md`.
 Audit coverage: All 13 lessons read in full (second pass, 2026-10-15): 1 stale, 3 unverified, 1 ok, 8 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).

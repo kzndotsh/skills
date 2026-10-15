@@ -1,4 +1,4 @@
-# Phase 16: Multi Agent And Swarms
+# Phase 16: Multi Agent and Swarms
 
 Upstream commit `1a8c4fd`. 25 lessons. Path pattern: `phases/16-multi-agent-and-swarms/<lesson>/docs/en.md`.
 Audit coverage: 2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.

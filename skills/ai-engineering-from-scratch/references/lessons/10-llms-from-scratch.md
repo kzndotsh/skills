@@ -1,4 +1,4 @@
-# Phase 10: Llms From Scratch
+# Phase 10: LLMs from Scratch
 
 Upstream commit `1a8c4fd`. 24 lessons. Path pattern: `phases/10-llms-from-scratch/<lesson>/docs/en.md`.
 Audit coverage: 2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).

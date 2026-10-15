@@ -1,4 +1,4 @@
-# Phase 11: Llm Engineering
+# Phase 11: LLM Engineering
 
 Upstream commit `1a8c4fd`. 17 lessons. Path pattern: `phases/11-llm-engineering/<lesson>/docs/en.md`.
 Audit coverage: All lessons swept for model, price and version claims. Flagged lessons are listed; an unflagged lesson only means no error was recorded, not that it was verified. Pricing, model and context-window numbers are mostly wrong or stale; LoRA advice contradicts its source paper.

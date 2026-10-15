@@ -1,4 +1,4 @@
-# Phase 12: Multimodal Ai
+# Phase 12: Multimodal AI
 
 Upstream commit `1a8c4fd`. 25 lessons. Path pattern: `phases/12-multimodal-ai/<lesson>/docs/en.md`.
 Audit coverage: All 25 lessons read in full (second pass, 2026-10-15): 18 wrong, 6 weak, 1 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).

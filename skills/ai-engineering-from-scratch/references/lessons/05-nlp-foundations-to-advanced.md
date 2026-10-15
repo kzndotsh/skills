@@ -1,4 +1,4 @@
-# Phase 05: Nlp Foundations To Advanced
+# Phase 05: NLP Foundations to Advanced
 
 Upstream commit `1a8c4fd`. 29 lessons. Path pattern: `phases/05-nlp-foundations-to-advanced/<lesson>/docs/en.md`.
 Audit coverage: 2 lessons sampled: attention lesson strong, NLI lesson has false claims.

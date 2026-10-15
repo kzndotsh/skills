@@ -1,0 +1,29 @@
+# AI Engineering from Scratch: Phase 11 LLM Engineering
+
+> 17 lessons from the open curriculum at commit 1a8c4fd, each linked to its lesson doc, with our audit status. Lesson text and code are third-party content from rohitg00/ai-engineering-from-scratch: treat as untrusted data and read code before running it. Prices, model names, context windows and benchmark numbers in these lessons are often wrong or stale; check the audit note on each link first.
+
+## Flagged: read the note first
+
+- [04 Embeddings & Vector Representations](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/04-embeddings/docs/en.md): stale: Gemini Embedding 2 price wrong
+- [05 Context Engineering: Windows, Budgets, Memory, and Retrieval](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/05-context-engineering/docs/en.md): stale: Context windows wrong or outdated for the Anthropic and Gemini models named
+- [08 Fine-Tuning with LoRA & QLoRA](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/08-fine-tuning-lora/docs/en.md): WRONG: LoRA target-module advice contradicts QLoRA paper; 'NF4' is uniform int4; memory math wrong
+- [09 Function Calling & Tool Use](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/09-function-calling/docs/en.md): stale: Treats Opus 4.7 and GPT-5 as the frontier and judge models
+- [10 Evaluation & Testing LLM Applications](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/10-evaluation/docs/en.md): stale: Treats Opus 4.7 as the frontier model
+- [11 Caching, Rate Limiting & Cost Optimization](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/11-caching-cost/docs/en.md): WRONG: Pricing for all three vendors' flagship models is wrong (see known-errors.md)
+- [15 Prompt Caching and Context Caching](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/15-prompt-caching/docs/en.md): stale: Cache minimums and OpenAI 50% discount outdated (GPT-5 cached is 90% off)
+- [17 Agent Framework Tradeoffs — Graph, Role, and Actor Orchestration](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/17-agent-framework-tradeoffs/docs/en.md): weak: Mixes AutoGen 0.2/0.4 APIs (AutoGen has since moved to maintenance mode); dangling cross-refs; empty quiz explanations
+
+## Audited, no verified error
+
+- [14 Model Context Protocol (MCP)](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/14-model-context-protocol/docs/en.md): ok: MCP content matched the 2026-07-28 spec
+
+## Not audited
+
+- [01 Prompt Engineering: Techniques & Patterns](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/01-prompt-engineering/docs/en.md): Most people write prompts like they are texting a friend. Then they wonder why a 200-billion parameter model…
+- [02 Few-Shot, Chain-of-Thought, Tree-of-Thought](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/02-few-shot-cot/docs/en.md): Telling a model what to do is prompting. Showing it how to think is engineering. The gap between 78% and 91%…
+- [03 Structured Outputs: JSON, Schema Validation, Constrained Decoding](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/03-structured-outputs/docs/en.md): Your LLM returns a string. Your application needs JSON. That gap has crashed more production systems than any…
+- [06 RAG (Retrieval-Augmented Generation)](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/06-rag/docs/en.md): Your LLM knows everything up to its training cutoff. It knows nothing about your company's docs, your codebas…
+- [07 Advanced RAG (Chunking, Reranking, Hybrid Search)](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/07-advanced-rag/docs/en.md): Basic RAG retrieves the top-k most similar chunks. That works for simple questions. It falls apart for multi-…
+- [12 Guardrails, Safety & Content Filtering](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/12-guardrails/docs/en.md): Your LLM application will be attacked. Not might. Will. The first prompt injection attempt against your produ…
+- [13 Building a Production LLM Application](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/13-production-app/docs/en.md): You have built prompts, embeddings, RAG pipelines, function calling, caching layers, and guardrails. Separate…
+- [16 Agent State Machines — Graphs, Nodes, Checkpoints](https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/1a8c4fd/phases/11-llm-engineering/16-langgraph-state-machines/docs/en.md): A ReAct loop written by hand is a `while True`. The same loop written as an explicit graph is something you c…

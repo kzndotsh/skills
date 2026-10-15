@@ -1,4 +1,4 @@
-# Phase 13: Tools And Protocols
+# Phase 13: Tools and Protocols
 
 Upstream commit `1a8c4fd`. 45 lessons. Path pattern: `phases/13-tools-and-protocols/<lesson>/docs/en.md`.
 Audit coverage: Claims swept in lessons 01-12 and 20-27. Specific claims verified in 06, 07, 09, 11, 12 and 23 (match the MCP spec) and 21, 24, 27; lessons 08, 10, 13-19 and 28-45 not individually audited. API comparisons (01-03) and OTel (20) have errors.

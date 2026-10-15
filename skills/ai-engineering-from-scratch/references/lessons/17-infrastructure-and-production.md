@@ -1,4 +1,4 @@
-# Phase 17: Infrastructure And Production
+# Phase 17: Infrastructure and Production
 
 Upstream commit `1a8c4fd`. 29 lessons. Path pattern: `phases/17-infrastructure-and-production/<lesson>/docs/en.md`.
 Audit coverage: Lessons 01-10 fact-checked: weakest phase factually (wrong parameter count, misread benchmark, stale versions).

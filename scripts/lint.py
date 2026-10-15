@@ -104,6 +104,42 @@ def lint_skill(skill, repo):
     return errors
 
 
+LINK_RE = re.compile(r"^- \[[^\]]+\]\((https?://[^)\s]+)\)(: .+)?$")
+OUR_RAW = "https://raw.githubusercontent.com/kzndotsh/skills/main/"
+
+
+def lint_llms(repo):
+    """Check llmstxt.org structure, that links into this repo resolve, and that llms.txt is fresh."""
+    errors = []
+    files = [f for f in [repo / "llms.txt", *sorted((repo / "llms").rglob("*.txt"))] if f.is_file()]
+    for f in files:
+        rel = f.relative_to(repo)
+        lines = f.read_text().lstrip("\ufeff").splitlines()
+        if not lines or not lines[0].startswith("# "):
+            errors.append(f"{rel}: first line must be an H1 ('# Title')")
+        if len([l for l in lines[:6] if l.startswith("> ")]) == 0:
+            errors.append(f"{rel}: missing the blockquote summary near the top")
+        in_list = False
+        for n, l in enumerate(lines, 1):
+            if l.startswith("## "):
+                in_list = True
+            elif in_list and l.startswith("- "):
+                m = LINK_RE.match(l)
+                if not m:
+                    errors.append(f"{rel}:{n}: list item is not '- [name](url): note'")
+                    continue
+                url = m.group(1)
+                if url.startswith(OUR_RAW) and not (repo / url[len(OUR_RAW):]).exists():
+                    errors.append(f"{rel}:{n}: link target not in this repo: {url[len(OUR_RAW):]}")
+    gen = repo / "scripts" / "gen_llms.py"
+    if gen.is_file() and (repo / "llms.txt").is_file():
+        ns = {"__file__": str(gen), "__name__": "gen_llms"}
+        exec(compile(gen.read_text(), str(gen), "exec"), ns)
+        if ns["build"]() != (repo / "llms.txt").read_text():
+            errors.append("llms.txt is out of date: run python3 scripts/gen_llms.py")
+    return errors, len(files)
+
+
 def main():
     repo = Path(__file__).resolve().parent.parent
     skills_dir = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else repo / "skills"
@@ -112,9 +148,13 @@ def main():
         print(f"no skills found in {skills_dir}")
         return 1
     errors = [e for s in skills for e in lint_skill(s, repo)]
+    llms_errors, n_llms = ([], 0)
+    if len(sys.argv) == 1:  # only for the real repo, not an ad hoc skills dir
+        llms_errors, n_llms = lint_llms(repo)
+    errors += llms_errors
     for e in errors:
         print("ERROR", e)
-    print(f"{len(skills)} skill(s) checked, {len(errors)} error(s)")
+    print(f"{len(skills)} skill(s) and {n_llms} llms file(s) checked, {len(errors)} error(s)")
     return 1 if errors else 0
 
 

@@ -1,4 +1,4 @@
-# Phase 02: Ml Fundamentals
+# Phase 02: ML Fundamentals
 
 Upstream commit `1a8c4fd`. 21 lessons. Path pattern: `phases/02-ml-fundamentals/<lesson>/docs/en.md`.
 Audit coverage: All 21 lessons read in full (second pass, 2026-10-15): 3 wrong, 1 stale, 6 weak, 3 ok, 8 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).

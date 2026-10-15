@@ -1,4 +1,4 @@
-# Phase 08: Generative Ai
+# Phase 08: Generative AI
 
 Upstream commit `1a8c4fd`. 15 lessons. Path pattern: `phases/08-generative-ai/<lesson>/docs/en.md`.
 Audit coverage: All 15 lessons read in full (second pass, 2026-10-15): 9 wrong, 2 stale, 1 ok, 3 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).
