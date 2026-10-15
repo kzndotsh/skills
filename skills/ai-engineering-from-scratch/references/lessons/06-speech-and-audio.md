@@ -1,11 +1,11 @@
 # Phase 06: Speech And Audio
 
 Upstream commit `1a8c4fd`. 17 lessons. Path pattern: `phases/06-speech-and-audio/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-audio-fundamentals` | Audio Fundamentals — Waveforms, Sampling, Fourier Transform | Learn | ~45 minutes | py | - | 1 | Waveforms are the raw signal. Spectrograms are the representation. Mel features are the ML-friendly form. Every modern ASR and TT… | Phase 1 · 06 (Vectors & Matrices), Phase 1 · 14 (Probability Distribu… | - |
 | 02 | `02-spectrograms-mel-features` | Spectrograms, Mel Scale & Audio Features | Build | ~45 minutes | py | - | 1 | Neural nets do not consume raw waveforms well. They consume spectrograms. They consume mel spectrograms even better. Every ASR, T… | Phase 6 · 01 (Audio Fundamentals) | - |

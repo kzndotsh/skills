@@ -62,15 +62,23 @@ def build_lessons(repo, out, commit):
         body = (
             f"# Phase {pnum}: {phase_title(ph.name)}\n\n"
             f"Upstream commit `{commit}`. {len(lessons)} lessons. Path pattern: `phases/{ph.name}/<lesson>/docs/en.md`.\n"
-            f"Audit status: {trust_note}\n\n"
+            f"Audit coverage: {trust_note}\n\n"
             "Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; "
-            "Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.\n\n"
-            "| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |\n"
+            "Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.\n\n"
+            "| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |\n"
             "|---|---|---|---|---|---|---|---|---|---|---|\n" + "\n".join(rows) + "\n"
         )
         (out / "lessons" / f"{ph.name}.md").write_text(body)
         summary.append((pnum, ph.name, len(lessons)))
     return summary
+
+
+def lesson_title(repo, path):
+    doc = repo / path / "docs" / "en.md"
+    if not doc.exists():
+        return "(title not found)"
+    t = re.search(r"^#\s+(.+)$", doc.read_text(errors="replace"), re.M)
+    return t.group(1).strip() if t else "(title not found)"
 
 
 def trust_of(path):
@@ -84,7 +92,7 @@ def build_paths(repo, out, commit):
         "# Learning paths", "",
         f"Source: `learning-paths/*.json` at commit `{commit}`. Each path is an ordered lesson route with time estimates. "
         "Paths whose JSON lists `invocation` also exist as in-repo tutor skills. Hour estimates in the upstream README for the two longest routes are wrong; use the minutes below. "
-        "The bracket after each lesson is its audit status (see trust-guide.md); optional lessons come last.", "",
+        "The bracket after each lesson is its audit status (see trust-guide.md; labels: ok, WRONG, stale, weak, unverified, not audited); optional lessons come last.", "",
         "## Contents", "",
     ]
     files = sorted((repo / "learning-paths").glob("*.json"))
@@ -100,7 +108,7 @@ def build_paths(repo, out, commit):
                   + (f", {len(d['optionalLessons'])} optional" if d.get("optionalLessons") else "") + ".", ""]
         for l in lessons + d.get("optionalLessons", []):
             lines.append(f"{l['order']}. " if l.get('order') else "- (optional) ")
-            lines[-1] += (f"`{l['path']}` {cell(l.get('title', ''), 80)} ({l.get('minutes', '?')} min{'' if l.get('required', True) else ', optional'}) [{trust_of(l['path'])}]")
+            lines[-1] += (f"`{l['path']}` {cell(l.get('title') or lesson_title(repo, l['path']), 80)} ({l.get('minutes', '?')} min{'' if l.get('required', True) else ', optional'}) [{trust_of(l['path'])}]")
         lines.append("")
     (out / "learning-paths.md").write_text("\n".join(lines))
     return len(docs)

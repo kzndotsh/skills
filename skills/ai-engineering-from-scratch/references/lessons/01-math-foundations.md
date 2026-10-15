@@ -1,11 +1,11 @@
 # Phase 01: Math Foundations
 
 Upstream commit `1a8c4fd`. 22 lessons. Path pattern: `phases/01-math-foundations/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled: one sound, one with a statistical-advice error.
+Audit coverage: 2 lessons sampled: one sound, one with a statistical-advice error.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-linear-algebra-intuition` | Linear Algebra Intuition | Learn | ~60 minutes | jl, py | y | 1 | Every AI model is just matrix math wearing a fancy hat. | Phase 0 | - |
 | 02 | `02-vectors-matrices-operations` | Vectors, Matrices & Operations | Build | ~60 minutes | jl, py | y | 1 | Every neural network is just matrix multiplication with extra steps. | Phase 1, Lesson 01 (Linear Algebra Intuition) | - |

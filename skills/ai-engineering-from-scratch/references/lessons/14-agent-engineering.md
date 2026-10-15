@@ -1,11 +1,11 @@
 # Phase 14: Agent Engineering
 
 Upstream commit `1a8c4fd`. 54 lessons. Path pattern: `phases/14-agent-engineering/<lesson>/docs/en.md`.
-Audit status: Claims swept in lessons 01-10 and 30-40: paper citations reliable; 17 and 28 (sampled separately) are thin toys; 31-40 lean on unverifiable blog anecdotes. Lessons 11-29 mostly not audited.
+Audit coverage: Claims swept in lessons 01-10 and 30-40: paper citations reliable; 17 and 28 (sampled separately) are thin toys; 31-40 lean on unverifiable blog anecdotes. Lessons 11-29 mostly not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-the-agent-loop` | The Agent Loop: Observe, Think, Act | Build | ~60 minutes | py, ts | y | 1 | Every agent in 2026 is a variant of the ReAct loop from 2022 — Claude Code, Cursor, Devin, Operator included. Reasoning tokens in… | Phase 11 (LLM Engineering), Phase 13 (Tools and Protocols) | stale: ReAct citation correct; lists AutoGen v0.4 as a current harness |
 | 02 | `02-rewoo-plan-and-execute` | ReWOO and Plan-and-Execute: Decoupled Planning | Build | ~60 minutes | py | y | 1 | ReAct interleaves thought and action in one stream. ReWOO separates them: one big plan up front, then execute. 5x fewer tokens, +… | Phase 14 · 01 (Agent Loop) | ok: ReWOO and Plan-and-Act citations verified |
@@ -45,7 +45,7 @@ Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Ou
 | 36 | `36-scope-contracts` | Scope Contracts and Task Boundaries | Build | ~50 minutes | py | y | 1 | The model does not know where the work ends. A scope contract is a per-task file that says where the work begins, where it ends,… | Phase 14 · 32 (Minimal Workbench), Phase 14 · 33 (Rules as Constraint… | unverified: Blog-sourced statistics |
 | 37 | `37-runtime-feedback-loops` | Runtime Feedback Loops | Build | ~50 minutes | py | y | 1 | Agents that do not see real command output guess. A feedback runner captures stdout, stderr, exit code, and timing into a structu… | Phase 14 · 32 (Minimal Workbench), Phase 14 · 35 (Init Script) | - |
 | 38 | `38-verification-gates` | Verification Gates | Build | ~55 minutes | py | y | 1 | The agent does not get to mark its own work as done. A verification gate reads the scope contract, the feedback log, the rule rep… | Phase 14 · 33 (Rules), Phase 14 · 36 (Scope), Phase 14 · 37 (Feedback) | ok: arXiv 2604.01483 is real but a narrow finance-compliance fit |
-| 39 | `39-reviewer-agent` | Reviewer Agent: Separate Builder from Marker | Build | ~55 minutes | py | y | 1 | The agent that wrote the code cannot grade it. A reviewer is a second loop with a different system prompt, a different goal, and… | Phase 14 · 38 (Verification Gate) | unverified: Cloudflare figures only via secondary coverage; other stats anecdotal |
+| 39 | `39-reviewer-agent` | Reviewer Agent: Separate Builder from Marker | Build | ~55 minutes | py | y | 1 | The agent that wrote the code cannot grade it. A reviewer is a second loop with a different system prompt, a different goal, and… | Phase 14 · 38 (Verification Gate) | unverified: Cloudflare figures not independently verified; other statistics anecdotal |
 | 40 | `40-multi-session-handoff` | Multi-Session Handoff | Build | ~50 minutes | py | y | 1 | The session is going to end. The work is not. The handoff packet is the artifact that turns "the agent worked for an hour" into "… | Phase 14 · 34 (Repo Memory), Phase 14 · 38 (Verification), Phase 14 ·… | - |
 | 41 | `41-workbench-for-real-repos` | The Workbench on a Real Repo | Build | ~60 minutes | py | y | 1 | Eleven lessons of surfaces are worth nothing if they do not survive contact with a real codebase. This lesson runs the same task… | Phases 14 · 32 to 14 · 40 | - |
 | 42 | `42-agent-workbench-capstone` | Capstone: Ship a Reusable Agent Workbench Pack | Build | ~75 minutes | py | y | 17 | The mini-track ends with a pack you drop into any repo. Eleven lessons of surfaces compressed into a directory you can `cp -r` an… | Phases 14 · 31 to 14 · 41 | - |

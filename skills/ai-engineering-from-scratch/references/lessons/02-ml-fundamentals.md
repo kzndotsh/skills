@@ -1,11 +1,11 @@
 # Phase 02: Ml Fundamentals
 
 Upstream commit `1a8c4fd`. 21 lessons. Path pattern: `phases/02-ml-fundamentals/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-what-is-machine-learning` | What Is Machine Learning | Learn | ~45 minutes | py | y | 1 | Machine learning is teaching computers to find patterns in data instead of writing rules by hand. | Phase 1 (Math Foundations) | - |
 | 02 | `02-linear-regression` | Linear Regression | Build | ~90 minutes | jl, py | y | 1 | Linear regression draws the best straight line through your data. It is the "hello world" of machine learning. | Phase 1 (Linear Algebra, Calculus, Optimization), Phase 2 Lesson 1 | - |

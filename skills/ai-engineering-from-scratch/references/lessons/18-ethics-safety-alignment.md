@@ -1,16 +1,16 @@
 # Phase 18: Ethics Safety Alignment
 
 Upstream commit `1a8c4fd`. 30 lessons. Path pattern: `phases/18-ethics-safety-alignment/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled: real citations but toy code that does not support the text; one misattribution.
+Audit coverage: 2 lessons sampled: real citations but toy code that does not support the text; one misattribution.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-instruction-following-alignment-signal` | Instruction-Following as Alignment Signal | Learn | ~45 minutes | py | y | 1 | Every later critique of RLHF argues against this pipeline. Before you study how optimization pressure distorts a proxy, you have… | Phase 10 · 06 (SFT), Phase 10 · 07 (RLHF), Phase 10 · 08 (DPO) | - |
 | 02 | `02-reward-hacking-goodhart` | Reward Hacking and Goodhart's Law | Learn | ~60 minutes | py | y | 1 | Any optimizer strong enough to maximize a proxy reward will find the gap between the proxy and the thing you actually wanted. Gao… | Phase 18 · 01 (InstructGPT), Phase 10 · 07 (RLHF) | - |
 | 03 | `03-direct-preference-optimization-family` | The Direct Preference Optimization Family | Learn | ~75 minutes | py | y | 1 | Rafailov et al. (2023) showed RLHF's optimum has a closed form in terms of the preference data, so you can skip the explicit rewa… | Phase 18 · 01 (InstructGPT), Phase 18 · 02 (Reward hacking), Phase 10… | - |
-| 04 | `04-sycophancy-rlhf-amplification` | Sycophancy as RLHF Amplification | Learn | ~60 minutes | py | y | 1 | Sycophancy is not a bug in the data — it is a property of the loss. Shapira et al. (arXiv:2602.01002, Feb 2026) give a formal two… | Phase 18 · 01 (InstructGPT), Phase 18 · 02 (Reward hacking) | weak: Real arXiv cites, but Science DOI looks fabricated and the toy simulator contradicts the claim |
+| 04 | `04-sycophancy-rlhf-amplification` | Sycophancy as RLHF Amplification | Learn | ~60 minutes | py | y | 1 | Sycophancy is not a bug in the data — it is a property of the loss. Shapira et al. (arXiv:2602.01002, Feb 2026) give a formal two… | Phase 18 · 01 (InstructGPT), Phase 18 · 02 (Reward hacking) | weak: Doc says alpha 0.3-0.5 restores near-base sycophancy but the code's own takeaway says no alpha does; Science DOI looks fabricated |
 | 05 | `05-constitutional-ai-rlaif` | Constitutional AI and RLAIF | Learn | ~60 minutes | py | y | 1 | Bai et al. (arXiv:2212.08073, 2022) asked: what if we replaced the human labeler with an AI that reads a list of principles? Cons… | Phase 18 · 01 (InstructGPT), Phase 18 · 02 (Reward hacking) | - |
 | 06 | `06-mesa-optimization-deceptive-alignment` | Mesa-Optimization and Deceptive Alignment | Learn | ~75 minutes | py | y | 1 | Hubinger et al. (arXiv:1906.01820, 2019) named the problem a decade before it was empirically demonstrated. When you train a lear… | Phase 18 · 01 (InstructGPT), Phase 09 (RL foundations) | - |
 | 07 | `07-sleeper-agents-persistent-deception` | Sleeper Agents — Persistent Deception | Learn | ~60 minutes | py | y | 1 | Hubinger et al. (arXiv:2401.05566, January 2024) built the first empirical model organisms of deceptive alignment. Two constructi… | Phase 18 · 06 (mesa-optimization), Phase 10 · 07 (RLHF) | - |

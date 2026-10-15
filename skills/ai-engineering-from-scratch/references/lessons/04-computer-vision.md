@@ -1,11 +1,11 @@
 # Phase 04: Computer Vision
 
 Upstream commit `1a8c4fd`. 28 lessons. Path pattern: `phases/04-computer-vision/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-image-fundamentals` | Image Fundamentals — Pixels, Channels, Color Spaces | Build | ~45 minutes | py | y | 2 | An image is a tensor of light samples. Every vision model you will ever use starts from this one fact. | Phase 1 Lesson 12 (Tensor Operations), Phase 3 Lesson 11 (Intro to Py… | - |
 | 02 | `02-convolutions-from-scratch` | Convolutions from Scratch | Build | ~75 minutes | py | y | 2 | A convolution is a tiny dense layer you slide across an image, sharing the same weights at every location. | Phase 3 (Deep Learning Core), Phase 4 Lesson 01 (Image Fundamentals) | - |

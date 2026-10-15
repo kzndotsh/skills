@@ -1,11 +1,11 @@
 # Phase 12: Multimodal Ai
 
 Upstream commit `1a8c4fd`. 25 lessons. Path pattern: `phases/12-multimodal-ai/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-vision-transformer-patch-tokens` | Vision Transformers and the Patch-Token Primitive | Learn | ~120 minutes | py | - | 1 | Before anything multimodal, an image has to become a sequence of tokens a transformer can eat. The 2020 ViT paper answered this w… | Phase 7 (Transformers), Phase 4 (Computer Vision) | - |
 | 02 | `02-clip-contrastive-pretraining` | CLIP and Contrastive Vision-Language Pretraining | Build | ~180 minutes | py | - | 1 | OpenAI's CLIP (2021) proved a single idea big enough to power the next five years: align an image encoder and a text encoder in t… | Phase 12 · 01 (ViT patches), Phase 7 (Transformers) | - |

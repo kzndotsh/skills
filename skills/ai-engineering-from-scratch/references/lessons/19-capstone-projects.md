@@ -1,11 +1,11 @@
 # Phase 19: Capstone Projects
 
 Upstream commit `1a8c4fd`. 85 lessons. Path pattern: `phases/19-capstone-projects/<lesson>/docs/en.md`.
-Audit status: Not audited. Capstone projects; see repo-guide.md.
+Audit coverage: Not audited. Capstone projects; see repo-guide.md.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-terminal-native-coding-agent` | Capstone 01 — Terminal-Native Coding Agent | Capstone | 35 hours | py, ts | y | 1 | By 2026 the shape of a coding agent is settled. A TUI harness, a stateful plan, a sandboxed tool surface, a loop that plans, acts… | Phase 11 (LLM engineering), Phase 13 (tools and protocols), Phase 14… | - |
 | 02 | `02-rag-over-codebase` | Capstone 02 — RAG over Codebase (Cross-Repo Semantic Search) | Capstone | 30 hours | py, ts | y | 1 | Every serious engineering org in 2026 runs an internal code search that understands meaning, not just strings. Sourcegraph Amp, C… | Phase 5 (NLP foundations), Phase 7 (transformers), Phase 11 (LLM engi… | - |

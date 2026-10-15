@@ -1,11 +1,11 @@
 # Phase 08: Generative Ai
 
 Upstream commit `1a8c4fd`. 15 lessons. Path pattern: `phases/08-generative-ai/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-generative-models-taxonomy-history` | Generative Models — Taxonomy & History | Learn | ~45 minutes | py | - | 1 | Every image model, text model, video model, and 3D model fits in one of five buckets. Pick the wrong bucket and you will fight th… | Phase 2 (ML Fundamentals), Phase 3 (Deep Learning Core), Phase 7 · 14… | - |
 | 02 | `02-autoencoders-vae` | Autoencoders & Variational Autoencoders (VAE) | Build | ~75 minutes | py | - | 1 | A plain autoencoder compresses then reconstructs. It memorizes. It does not generate. Add one trick — force the code to look Gaus… | Phase 3 · 02 (Backprop), Phase 3 · 07 (CNNs), Phase 8 · 01 (Taxonomy) | - |

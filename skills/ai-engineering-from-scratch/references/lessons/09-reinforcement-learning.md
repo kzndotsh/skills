@@ -1,11 +1,11 @@
 # Phase 09: Reinforcement Learning
 
 Upstream commit `1a8c4fd`. 12 lessons. Path pattern: `phases/09-reinforcement-learning/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-mdps-states-actions-rewards` | MDPs, States, Actions & Rewards | Learn | ~45 minutes | py | - | 1 | A Markov Decision Process is five things: states, actions, transitions, rewards, a discount. Everything in RL — Q-learning, PPO,… | Phase 1 · 06 (Probability & Distributions), Phase 2 · 01 (ML Taxonomy) | - |
 | 02 | `02-dynamic-programming` | Dynamic Programming — Policy Iteration & Value Iteration | Build | ~75 minutes | py | - | 1 | Dynamic programming is RL with cheating. You already know the transition and reward functions; you just iterate the Bellman equat… | Phase 9 · 01 (MDPs) | - |

@@ -1,11 +1,11 @@
 # Phase 10: Llms From Scratch
 
 Upstream commit `1a8c4fd`. 24 lessons. Path pattern: `phases/10-llms-from-scratch/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).
+Audit coverage: 2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-tokenizers` | Tokenizers: BPE, WordPiece, SentencePiece | Build | ~90 minutes | py, rs | y | 2 | Your LLM does not read English. It reads integers. The tokenizer decides whether those integers carry meaning or waste it. | Phase 05 (NLP Foundations) | - |
 | 02 | `02-building-a-tokenizer` | Building a Tokenizer from Scratch | Build | ~90 minutes | py | y | 1 | Lesson 01 gave you a toy. This lesson gives you a weapon. | Phase 10, Lesson 01 (Tokenizers: BPE, WordPiece, SentencePiece) | WRONG: Several factual errors; without the regex package, non-ASCII text is silently dropped |

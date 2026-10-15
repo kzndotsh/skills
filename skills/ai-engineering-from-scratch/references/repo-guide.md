@@ -29,7 +29,7 @@ i18n/               root README machine-translated only; ignore
 site/ api/ lib/ scripts/ web/ book/   website and build infrastructure; ignore
 ```
 
-Counts: 542 lessons, 20 phases (README and ROADMAP agree). The README's hour estimates and ROADMAP's "~332 hours" are wrong; per-phase headers sum to about 1,170 h. Use `learning-paths.md` minutes instead.
+Counts: 542 lessons in 20 phases (README and the directory tree agree; ROADMAP's footer still says 523). Hour estimates disagree: README's start-here table, ROADMAP's header (~332 h) and footer (~1,081 h), and the per-phase headers (about 1,170 h) are three different totals. Use `learning-paths.md` minutes instead.
 
 ## Fetch a lesson or file on demand
 
@@ -62,16 +62,16 @@ Rated from reading them (see `trust-guide.md` for caveats):
 | `manuals/` (3) | High | Every claim cites a spec section, proto, or captured run; pinned to fast-moving versions (A2A 1.0.1, sbx 0.47, rea 6.5). Check the pin before trusting version details. |
 | `glossary/terms.md` | High | 250 terms, no duplicate headings; 143 have sources; eight spot-checked definitions were accurate. glossary/README.md is stale ("60+ terms"). |
 | `learning-paths/*.json` | Medium-high | Ordered routes. The MCP, Agent Skills and Reverse Engineering routes match the README's time claims. |
-| Phase 13 lessons 22-27 | High | The only five lesson outputs that are real skill bundles with scripts, assets, references (`skill-contract-reviewer` etc.). |
+| Phase 13 lessons 22, 24, 25, 26, 27 | High | The only five lesson outputs that are real skill bundles with scripts, assets, references (`skill-contract-reviewer`, `skill-catalog-builder`, `skill-invocation-router`, `skill-safety-reviewer`, `skill-release-gate`). Lesson 23's output is a plain `skill-*.md`, not a bundle. |
 | `certifications/` | Medium | Prose is original; structure follows public exam guides. Fees and eligibility go stale. Uses credential names and a hotlinked Credly badge, so licensing risk is low to moderate. |
-| `projects/` | Medium | 79 projects, 78 ready; solutions 200-360 lines; stage docs reuse boilerplate and one shared scenario. |
+| `projects/` | Medium | 79 projects with a `project.json`; solutions 200-360 lines; stage docs reuse boilerplate and one shared scenario. |
 
 ## Lesson `outputs/` artifacts
 
-534 files: 409 `skill-*.md`, 100 `prompt-*.md`, a handful of JSON or reports. Findings from reading about 50 in full:
-- All 409 `skill-*.md` have `name` and `description` frontmatter, but none is a `dir/SKILL.md`, only 81 have a `name` equal to the filename, and only 5 say when to trigger. They are not drop-in skills.
+534 files directly in `outputs/` folders (580 including nested files): 409 `skill-*.md`, 100 `prompt-*.md`, a handful of JSON or reports. Findings from reading about 50 in full:
+- All 409 `skill-*.md` have `name` and `description` frontmatter, but none is a `dir/SKILL.md`, only 81 have a `name` equal to the filename, and about 5 contain explicit trigger wording. They are not drop-in skills.
 - About 150 are terse "Given X, output Y, Refuse Z" specs with unsourced thresholds. 288 start "Given a/an/the". No near-duplicates.
-- 120 (29%) refer to "Lesson N", `code/` or `main.py`, so they depend on the lesson.
+- Roughly a quarter (94 to 120 of 409, depending on how references are counted) refer to "Lesson N", `code/` or `main.py`, so they depend on the lesson.
 - Best subsets: the Phase 13 bundles, Phase 11 patterns and checklists, Phase 10 alignment and reward-model selectors, the numerical debugger.
 - Dated: pricing and model tables frozen at April 2026 or earlier; LlamaGuard 3 listed with 13 categories (it has 14).
 

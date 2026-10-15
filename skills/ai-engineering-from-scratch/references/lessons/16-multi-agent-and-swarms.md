@@ -1,11 +1,11 @@
 # Phase 16: Multi Agent And Swarms
 
 Upstream commit `1a8c4fd`. 25 lessons. Path pattern: `phases/16-multi-agent-and-swarms/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.
+Audit coverage: 2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-why-multi-agent` | Why Multi-Agent? | Learn | ~60 minutes | ts | y | 1 | One agent hits a wall. The smart move is not a bigger agent - it is more agents. | Phase 14 (Agent Engineering) | - |
 | 02 | `02-fipa-acl-heritage` | Heritage of FIPA-ACL and Speech Acts | Learn | ~60 minutes | py | - | 1 | Before MCP, before A2A, there was FIPA-ACL. In 2000 the IEEE Foundation for Intelligent Physical Agents ratified an agent communi… | Phase 16 · 01 (Why Multi-Agent) | - |

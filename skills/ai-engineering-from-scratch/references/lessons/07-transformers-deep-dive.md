@@ -1,11 +1,11 @@
 # Phase 07: Transformers Deep Dive
 
 Upstream commit `1a8c4fd`. 16 lessons. Path pattern: `phases/07-transformers-deep-dive/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled: speculative-decoding math right, T5/BART is a stub.
+Audit coverage: 2 lessons sampled: speculative-decoding math right, T5/BART is a stub.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-why-transformers` | Why Transformers — The Problems with RNNs | Learn | ~45 minutes | jl, py | - | 1 | RNNs process tokens one at a time. Transformers process all tokens at once. That single architectural bet changed every scaling c… | Phase 3 (Deep Learning Core), Phase 5 · 09 (Sequence-to-Sequence), Ph… | - |
 | 02 | `02-self-attention-from-scratch` | Self-Attention from Scratch | Build | ~90 minutes | jl, py, rs | y | 1 | Attention is a lookup table where every word asks "who matters to me?" - and learns the answer. | Phase 3 (Deep Learning Core), Phase 5 Lesson 10 (Sequence-to-Sequence) | - |

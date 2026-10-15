@@ -1,11 +1,11 @@
 # Phase 00: Setup And Tooling
 
 Upstream commit `1a8c4fd`. 13 lessons. Path pattern: `phases/00-setup-and-tooling/<lesson>/docs/en.md`.
-Audit status: Not audited.
+Audit coverage: Not audited.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-dev-environment` | Dev Environment | Build | ~45 minutes | py, rs, ts | y | 1 | Your tools shape your thinking. Set them up once, set them up right. | None | - |
 | 02 | `02-git-and-collaboration` | Git & Collaboration | Learn | ~30 minutes | - | y | - | Version control is not optional. Every experiment, every model, every lesson you build here gets tracked. | Phase 0, Lesson 01 | - |

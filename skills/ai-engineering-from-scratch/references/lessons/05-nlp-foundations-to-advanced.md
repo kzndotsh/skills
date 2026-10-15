@@ -1,11 +1,11 @@
 # Phase 05: Nlp Foundations To Advanced
 
 Upstream commit `1a8c4fd`. 29 lessons. Path pattern: `phases/05-nlp-foundations-to-advanced/<lesson>/docs/en.md`.
-Audit status: 2 lessons sampled: attention lesson strong, NLI lesson has false claims.
+Audit coverage: 2 lessons sampled: attention lesson strong, NLI lesson has false claims.
 
-Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Trust = audit result (blank dash means not audited). Fetch a lesson per `repo-guide.md`.
+Columns: Type = Build or Learn; Lang = code file types; Quiz = has quiz.json; Out = reusable artifacts in outputs/; Audit = audit status (a dash means not audited). Fetch a lesson per `repo-guide.md`.
 
-| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Trust |
+| # | Folder | Title | Type | Time | Lang | Quiz | Out | Motto | Prerequisites | Audit |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01 | `01-text-processing` | Text Processing — Tokenization, Stemming, Lemmatization | Build | ~45 minutes | py | y | 1 | Language is continuous. Models are discrete. Preprocessing is the bridge. | Phase 2 · 14 (Naive Bayes) | - |
 | 02 | `02-bag-of-words-tfidf` | Bag of Words, TF-IDF, and Text Representation | Build | ~75 minutes | py | y | 1 | Count first, think later. TF-IDF still beats embeddings on well-defined tasks in 2026. | Phase 5 · 01 (Text Processing), Phase 2 · 02 (Linear Regression from… | - |

@@ -11,11 +11,11 @@
     ],
     "03/07": [
       "wrong",
-      "Doc backward pass omits dropout mask; demo cannot overfit; 'conclusion' is hard-coded; GPT-3 tokens wrong"
+      "RegularizedNetwork.backward in the doc omits the dropout mask (the Dropout class is fine); 'conclusion' is hard-coded; GPT-3 token count wrong"
     ],
     "03/12": [
       "wrong",
-      "JIT benchmark lacks block_until_ready (bogus speedup); optax and PaLM claims wrong or unsourced"
+      "JIT benchmark lacks block_until_ready (bogus speedup); optax advice and the 540B/2048-TPU claim wrong or unsourced"
     ],
     "05/10": [
       "ok",
@@ -43,11 +43,11 @@
     ],
     "11/04": [
       "stale",
-      "Gemini Embedding 2 price wrong ($0.20/M, not $0.15)"
+      "Gemini Embedding 2 price wrong"
     ],
     "11/05": [
       "stale",
-      "Context windows wrong or outdated (Opus 4.7 1M, Gemini 3 Pro 1M)"
+      "Context windows wrong or outdated for the Anthropic and Gemini models named"
     ],
     "11/08": [
       "wrong",
@@ -55,15 +55,15 @@
     ],
     "11/09": [
       "stale",
-      "Treats Opus 4.6 and GPT-5 as the frontier/judge models"
+      "Treats Opus 4.7 and GPT-5 as the frontier and judge models"
     ],
     "11/10": [
       "stale",
-      "Treats Opus 4.6 and GPT-5 as the frontier models"
+      "Treats Opus 4.7 as the frontier model"
     ],
     "11/11": [
       "wrong",
-      "Prices wrong: Opus 4.7 is $5/$25, GPT-5 $1.25/$10, Gemini 3 Pro about $2/$12"
+      "Pricing for all three vendors' flagship models is wrong (see known-errors.md)"
     ],
     "11/14": [
       "ok",
@@ -75,7 +75,7 @@
     ],
     "11/17": [
       "weak",
-      "Mixes AutoGen 0.2/0.4 APIs; AutoGen now in maintenance mode; dangling cross-refs; empty quiz explanations"
+      "Mixes AutoGen 0.2/0.4 APIs (AutoGen has since moved to maintenance mode); dangling cross-refs; empty quiz explanations"
     ],
     "13/01": [
       "wrong",
@@ -93,17 +93,9 @@
       "ok",
       "server/discover, ttlMs, cacheScope matched spec"
     ],
-    "13/08": [
-      "ok",
-      "Matched spec where checked"
-    ],
     "13/09": [
       "ok",
       "Error codes and per-request _meta matched spec"
-    ],
-    "13/10": [
-      "ok",
-      "Matched spec where checked"
     ],
     "13/11": [
       "ok",
@@ -183,7 +175,7 @@
     ],
     "14/39": [
       "unverified",
-      "Cloudflare figures only via secondary coverage; other stats anecdotal"
+      "Cloudflare figures not independently verified; other statistics anecdotal"
     ],
     "15/01": [
       "stale",
@@ -223,7 +215,7 @@
     ],
     "17/02": [
       "stale",
-      "Fireworks valuation outdated ($4B vs about $17.5B)"
+      "Fireworks valuation outdated"
     ],
     "17/03": [
       "wrong",
@@ -239,7 +231,7 @@
     ],
     "17/07": [
       "wrong",
-      "'7x' H100 vs GB200 comparison misreads SemiAnalysis (the $0.012 is GB200 vs MI325X)"
+      "'7x' H100 vs GB200 comparison misreads SemiAnalysis; the figures rest on one operating point"
     ],
     "17/09": [
       "ok",
@@ -251,7 +243,7 @@
     ],
     "18/04": [
       "weak",
-      "Real arXiv cites, but Science DOI looks fabricated and the toy simulator contradicts the claim"
+      "Doc says alpha 0.3-0.5 restores near-base sycophancy but the code's own takeaway says no alpha does; Science DOI looks fabricated"
     ],
     "18/22": [
       "wrong",
@@ -268,6 +260,10 @@
     "13/27": [
       "ok",
       "GitSkills dataset figures verified"
+    ],
+    "15/06": [
+      "stale",
+      "Treats Opus 4.6 as the frontier model; transfer result weaker than the lesson implies"
     ]
   },
   "phase_trust": {
@@ -282,9 +278,9 @@
     "08": "Not audited.",
     "09": "Not audited.",
     "10": "2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).",
-    "11": "Whole phase fact-checked: pricing, model and context-window numbers mostly wrong or stale; LoRA advice contradicts its source paper.",
+    "11": "All lessons swept for model, price and version claims. Flagged lessons are listed; an unflagged lesson only means no error was recorded, not that it was verified. Pricing, model and context-window numbers are mostly wrong or stale; LoRA advice contradicts its source paper.",
     "12": "Not audited.",
-    "13": "Claims swept in lessons 01-12 and 20-27; only lessons with an ok/WRONG/stale flag had specific claims verified. MCP lessons 06-12 and 23 matched the spec; lessons 13-19 and 28-45 were not audited. API comparisons (01-03) and OTel (20) have errors.",
+    "13": "Claims swept in lessons 01-12 and 20-27. Specific claims verified in 06, 07, 09, 11, 12 and 23 (match the MCP spec) and 21, 24, 27; lessons 08, 10, 13-19 and 28-45 not individually audited. API comparisons (01-03) and OTel (20) have errors.",
     "14": "Claims swept in lessons 01-10 and 30-40: paper citations reliable; 17 and 28 (sampled separately) are thin toys; 31-40 lean on unverifiable blog anecdotes. Lessons 11-29 mostly not audited.",
     "15": "Lessons 01-08 fact-checked: mostly correct, some outdated vendor and benchmark status.",
     "16": "2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.",
