@@ -1,6 +1,58 @@
 {
   "_comment": "Audit results (2026-10-15, upstream commit 1a8c4fd). Keys are PP/NN = phase number / lesson number. level: ok = claims checked and correct; wrong = verified error; stale = outdated; weak = flawed demo or thin; unverified = anecdote. Lessons not listed were NOT audited.",
   "flags": {
+    "00/01": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/02": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/03": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/04": [
+      "unverified",
+      "Default model id claude-sonnet-5 and the $5 signup credit could not be confirmed on official Anthropic pages; sources I found conflict."
+    ],
+    "00/05": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/06": [
+      "unverified",
+      "Claim that CUDA 11.8 builds fail on CUDA 12.x drivers is likely overstated; I could not fetch an exact NVIDIA sentence to quote."
+    ],
+    "00/07": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/08": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/09": [
+      "stale",
+      "Says GitHub gives 1 GB free for Git LFS; GitHub's current Free plan lists 10 GiB storage and 10 GiB bandwidth."
+    ],
+    "00/10": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/11": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "00/12": [
+      "unverified",
+      "Asserts 80% of AI bugs live at levels 1 and 2 with no source or data behind the figure."
+    ],
+    "00/13": [
+      "ok",
+      "Verified batched and sumprod both added in Python 3.12 as the lesson states; hand-checked printed outputs in doc and code. [single-pass]"
+    ],
     "01/09": [
       "ok",
       "Formulas right; GPT-2 perplexity quoted as both ~30 and 50; MI-bias caveat missing"
@@ -8,6 +60,90 @@
     "01/15": [
       "wrong",
       "Advises Wilcoxon on 5 CV folds (min p=0.0625, can never reach 0.05); no code in Build It"
+    ],
+    "02/01": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/02": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/03": [
+      "weak",
+      "Claims from-scratch matches sklearn boundary and metrics, but datasets differ (random vs np.random) and sklearn applies default L2 penalty. [single-pass]"
+    ],
+    "02/04": [
+      "clean",
+      "read in full; no confirmed error (a flagged issue was refuted on re-check)"
+    ],
+    "02/05": [
+      "ok",
+      "Verified Cortes & Vapnik 1995 and Platt 1998 SMO citations; no error found in the hinge, kernel, or dual math. [single-pass]"
+    ],
+    "02/06": [
+      "wrong",
+      "Distance-concentration ratios far above the quoted 1.01 and 1.001 (simulation: roughly 1.35 at d=100, 1.10 at d=1000)"
+    ],
+    "02/07": [
+      "clean",
+      "read in full; no confirmed error (a flagged issue was refuted on re-check)"
+    ],
+    "02/08": [
+      "wrong",
+      "Citation title is wrong: the Micci-Barreca 2001 paper is 'A preprocessing scheme for high-cardinality categorical attributes...', not 'Target Encoding Done Right'."
+    ],
+    "02/09": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/10": [
+      "weak",
+      "Doc names degree 5 the high-variance case, but code labels degree 5 'balanced' and hard-codes the degree-12 conclusion as printed text. [single-pass]"
+    ],
+    "02/11": [
+      "wrong",
+      "Majority-vote numbers are wrong: the doc's own binomial formula gives 82.6% for N=21 and 97.9% for N=101 at p=0.6, not 74% and 84%."
+    ],
+    "02/12": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/13": [
+      "stale",
+      "Presents MLflow registry stages (Staging/Production/Archived) as current; MLflow deprecated stages from 2.9 in favor of aliases."
+    ],
+    "02/14": [
+      "weak",
+      "Doc says naive_bayes.py compares against sklearn and ships 'with sklearn comparison', but the code has no sklearn import or comparison. [single-pass]"
+    ],
+    "02/15": [
+      "weak",
+      "Doc says the code compares AR with ARIMA and adds rolling-stat features, but time_series.py has neither (no statsmodels, no rolling features). [single-pass]"
+    ],
+    "02/16": [
+      "weak",
+      "Doc says the code compares from-scratch detectors against sklearn, but anomaly_detection.py imports only numpy and never calls sklearn. [single-pass]"
+    ],
+    "02/17": [
+      "weak",
+      "Threshold is tuned on a model trained on 75% of train, then applied to a different model trained on all of train; the printed heading says otherwise. [single-pass]"
+    ],
+    "02/18": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/19": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "02/20": [
+      "ok",
+      "Verified Evidently default drift tests (KS and chi-square up to 1000 rows, Wasserstein and JS above, threshold 0.1) and scipy ks_2samp exact-method rule; no error. [single-pass]"
+    ],
+    "02/21": [
+      "ok",
+      "Verified Feast TTL-relative-to-entity-timestamp and filter_by_created_timestamp text, and Rules of ML #29/#32 quotes; no error found. [single-pass]"
     ],
     "03/07": [
       "wrong",
@@ -17,6 +153,118 @@
       "wrong",
       "JIT benchmark lacks block_until_ready (bogus speedup); optax advice and the 540B/2048-TPU claim wrong or unsourced"
     ],
+    "04/01": [
+      "weak",
+      "Exercise 3 asks a 1x1 conv on ImageNet-standardized input to match rgb_to_grayscale on raw pixels; the weights cannot match as stated. [single-pass]"
+    ],
+    "04/02": [
+      "wrong",
+      "Doc says Sobel-x output is nonzero only at column 7; column 8 also equals 4.0 (window 7-9 gives 4*(x9-x7)=4)."
+    ],
+    "04/03": [
+      "wrong",
+      "Says BN was published simultaneously with VGG; VGG v1 is Sep 2014 and BN is Feb 2015."
+    ],
+    "04/04": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/05": [
+      "weak",
+      "freeze_bn_stats also sets BN weight/bias requires_grad=False, contradicting its own doc 'without freezing its weights'."
+    ],
+    "04/06": [
+      "wrong",
+      "encode() stores raw offset cx/stride-cell_x but decode applies sigmoid; a 0.5 offset decodes ~3.9px off at stride 32 (code fixed this with logit)."
+    ],
+    "04/07": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/08": [
+      "wrong",
+      "Says Mask R-CNN has four losses, then its own equation lists five terms (RPN cls/box, box cls/reg, mask)."
+    ],
+    "04/09": [
+      "ok",
+      "Citations check out (DCGAN arXiv 1511.06434, SN-GAN 1802.05957 stabilises the discriminator); no code or math error found. [single-pass]"
+    ],
+    "04/10": [
+      "ok",
+      "DDPM FID 3.17 on CIFAR-10 and Improved DDPM cosine/variance claims check out; the lesson's DDPM/DDIM math and code are consistent. [single-pass]"
+    ],
+    "04/11": [
+      "wrong",
+      "Claims 0.18215 VAE scale is hardcoded in every SD pipeline; SDXL uses 0.13025, as the lesson's own main.py states."
+    ],
+    "04/12": [
+      "wrong",
+      "Says 3D conv costs 'T/8 more FLOPs' than 2D; a 3x3x3 kernel versus 3x3 is 3x the FLOPs per output, so the stated factor is wrong."
+    ],
+    "04/13": [
+      "wrong",
+      "Says the PointNet classifier has about 1.6M params; summing the layers in its code gives about 0.81M (head Linear 1024x512 alone is 0.52M)."
+    ],
+    "04/14": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/15": [
+      "wrong",
+      "Edge picker lists MobileViT-S under 20-30M params, but MobileViT has about 6M params per its paper."
+    ],
+    "04/16": [
+      "stale",
+      "Startup hook uses @app.on_event, which FastAPI now documents as deprecated in favour of lifespan."
+    ],
+    "04/17": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/18": [
+      "wrong",
+      "Doc says CLIP-L/14 embedding dimension is 1024; the shared projection dimension is 768 (1024 is the hidden size)."
+    ],
+    "04/19": [
+      "wrong",
+      "Doc says the CNN max-pools height to 1, but four pools (2,2,(2,1),(2,1)) take H=32 to 2, and the code then averages over height."
+    ],
+    "04/20": [
+      "wrong",
+      "Doc calls semi-hard mining the 2016 FaceNet recipe, but FaceNet is arXiv 1503 (2015), as the lesson's own citation says."
+    ],
+    "04/21": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/22": [
+      "wrong",
+      "Memory math is off: 60 floats x 4 bytes x 5M Gaussians is 1.2 GB, not the 240 MB stated."
+    ],
+    "04/23": [
+      "ok",
+      "Verified DiT (Peebles & Xie) and SD3 rectified-flow paper (Esser et al., 2024) attributions on arXiv; no error found. [single-pass]"
+    ],
+    "04/24": [
+      "wrong",
+      "Doc splitter matches bare 'and', so words containing it (e.g. 'hand') split mid-word"
+    ],
+    "04/25": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "04/26": [
+      "wrong",
+      "Depth Anything V3 is a ByteDance Seed Team work, not Meta AI as the lesson states."
+    ],
+    "04/27": [
+      "ok",
+      "Verified BoT-SORT (Aharon et al., 2022) and ByteTrack (MOT17 results, low-score box association) on arXiv; no error found. [single-pass]"
+    ],
+    "04/28": [
+      "wrong",
+      "Wan-Video 2.1 (14B) is listed as non-commercial; its Hugging Face model card states Apache 2.0."
+    ],
     "05/10": [
       "ok",
       "Best sampled lesson; worked example verified by hand; cites lesson 09 numbers that don't exist"
@@ -25,6 +273,74 @@
       "wrong",
       "False claim that RAGAS/RAG evals use NLI; sample outputs invented"
     ],
+    "06/01": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "06/02": [
+      "wrong",
+      "Doc table says Stable Audio 2 uses EnCodec tokens; Stable Audio 2.0 uses a continuous latent. Code chirp also sweeps to about 7.8 kHz, not 4 kHz."
+    ],
+    "06/03": [
+      "wrong",
+      "ESC-50 AST baseline is 95.6% in the AST paper, not 82%. Also AudioCNN has about 0.1M params, not 3M as the doc says."
+    ],
+    "06/04": [
+      "unverified",
+      "LibriSpeech WER figures (Parakeet 1.40, Whisper-v3-turbo 1.58) could not be checked; the leaderboard fetch returned no table."
+    ],
+    "06/05": [
+      "wrong",
+      "Log-mel normalization is a fixed clamp to max minus 8 and (x+4)/4 in Whisper's code, not per-corpus mean and std as the doc states."
+    ],
+    "06/06": [
+      "weak",
+      "Code prints a hard-coded claim of 0% EER regardless of the computed value. The 2,700-speaker VoxCeleb training figure is unverified. [single-pass]"
+    ],
+    "06/07": [
+      "weak",
+      "HiFi-GAN sketch's 256x upsample contradicts the lesson's own 12.5 ms at 24 kHz hop (300 samples per frame) in main.py. [single-pass]"
+    ],
+    "06/08": [
+      "wrong",
+      "VALL-E misattributed to Baevski et al.; the doc's description of California AB 2905 is also doubtful (disclosure-only per secondary sources)"
+    ],
+    "06/09": [
+      "wrong",
+      "MusicGen weights are CC-BY-NC 4.0 (code is MIT), so the lesson's MIT licence and 'no compliance baggage' advice is wrong for commercial use."
+    ],
+    "06/10": [
+      "wrong",
+      "MMAU-Pro has 5,305 instances per its arXiv abstract, not 1800 as stated in the lesson's benchmark section."
+    ],
+    "06/11": [
+      "weak",
+      "The printed 'sub-500 ms' verdict and latency table are hard-coded text over fixed time.sleep stubs, so the code cannot show the latency claim. [single-pass]"
+    ],
+    "06/12": [
+      "weak",
+      "Doc says main.py wires all seven components, but the simulator has no barge-in or interruption handler; play() never checks VAD. [single-pass]"
+    ],
+    "06/13": [
+      "wrong",
+      "Mimi runs at 1.1 kbps (8 x 11 bits x 12.5 Hz), not 4.4 kbps; EnCodec's 1.5 kbps setting is 2 codebooks, not 4."
+    ],
+    "06/14": [
+      "weak",
+      "The 'Silero' step is a fake heuristic and the 20 ms cough cannot reach min_speech, so both runs emit identical events, contradicting the printed header."
+    ],
+    "06/15": [
+      "wrong",
+      "Hibiki-Zero cited as arXiv 2602.12345 (real 2602.11072) and licensed CC-BY 4.0 (model card says CC BY-NC-SA 4.0)"
+    ],
+    "06/16": [
+      "wrong",
+      "AASIST's ASVspoof 2019 LA EER is 0.83%, not 0.42%; AudioSeal's 485x is a detection speedup over WavMark, not a realtime factor."
+    ],
+    "06/17": [
+      "wrong",
+      "Worked WER example is 1 substitution over 5 words = 0.20, not ~0.17; BEATs-iter3 AudioSet-2M mAP is 48.0, not 0.548."
+    ],
     "07/08": [
       "weak",
       "Stub Build It, no cross-attention code, no quiz"
@@ -32,6 +348,114 @@
     "07/16": [
       "ok",
       "Speculative-decoding math correct; hardware (70B on one H100) and 'default everywhere' claims wrong"
+    ],
+    "08/01": [
+      "wrong",
+      "Doc's printed p(x in [-0.5,0.5]) of ~0.38 (histogram) and ~0.41 (KDE) is wrong; the mixture puts only ~0.03 mass there."
+    ],
+    "08/02": [
+      "wrong",
+      "Doc says the SD VAE has a 32x spatial-area downsample; 512 to 64 is 8x per axis (64x area), as the lesson's own 1024 to 128 numbers show."
+    ],
+    "08/03": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "08/04": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "08/05": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "08/06": [
+      "wrong",
+      "Doc says SDXL uses v-prediction; SDXL base's scheduler config sets prediction_type to epsilon."
+    ],
+    "08/07": [
+      "wrong",
+      "Doc says latents are 1/16th the pixels, but 512x512 to 64x64 is 64x fewer positions; Flux.1-Kontext is dated Dec 2024 but released May 29, 2025."
+    ],
+    "08/08": [
+      "wrong",
+      "Doc gives ControlNet sizes as ~360M for SDXL and ~70M for SD 1.5; the SD 1.5 canny ControlNet is 361M params and the SDXL one about 1.25B."
+    ],
+    "08/09": [
+      "stale",
+      "Lists DALL-E 3 as an inpainting model; it is removed from the API (and may never have supported edits)"
+    ],
+    "08/10": [
+      "stale",
+      "Recommends Sora as a hosted top text-to-video option; OpenAI shut down the Sora 2 models and Videos API on 2026-09-24, before today."
+    ],
+    "08/11": [
+      "wrong",
+      "Says 24 kHz audio at 2 kbps uses 8 RVQ codebooks at 75 Hz; that is 8 x 10 bits x 75 Hz = 6 kbps (Encodec's 6 kbps setting)."
+    ],
+    "08/12": [
+      "ok",
+      "Verified the 59-parameter-per-Gaussian count and Objaverse-XL's 10.2M objects; no error found in the doc or the toy 2D fit. [single-pass]"
+    ],
+    "08/13": [
+      "wrong",
+      "Sign error: d/dt of a(t)x0 + s(t)x1 is a'x0 + s'x1, so v = a'x0 - s'x1 is wrong and contradicts the doc's own dx/dt = x1 - x0."
+    ],
+    "08/14": [
+      "wrong",
+      "HPSv2 was trained on 798k preference choices; 107k is the prompt count. PickScore's Pick-a-Pic v1 is about 0.5M examples, not 2.6M."
+    ],
+    "08/19": [
+      "wrong",
+      "HART is discrete AR tokens plus a continuous residual learned by a small diffusion module; it is not MaskGIT-style decoding of a VAR variant."
+    ],
+    "09/01": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "09/02": [
+      "unverified",
+      "Doc says the slip=0.1 MDP gives V*(0,0) approx -6; the number is never computed or printed, so it could not be checked."
+    ],
+    "09/03": [
+      "wrong",
+      "arXiv 1404.6362 is a different paper (Cabre et al.), not Mahmood et al.; code prints a -39.41 DP reference that lesson 02 never computes."
+    ],
+    "09/04": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "09/05": [
+      "wrong",
+      "Doc says the 2013 DQN paper beat every classical agent on seven Atari games; the paper's abstract says it beat prior methods on six of the games."
+    ],
+    "09/06": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "09/07": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "09/08": [
+      "weak",
+      "GAE loop bootstraps the next env's first state at truncated rollout boundaries, contradicting the TD-residual formula the lesson teaches. [single-pass]"
+    ],
+    "09/09": [
+      "stale",
+      "TRL PPO snippet uses an API current docs replaced: PPOTrainer moved to trl.experimental, no target_kl/adap_kl_ctrl, no ppo.step."
+    ],
+    "09/10": [
+      "weak",
+      "Lesson describes a 6x6 GridWorld with opposite-corner starts; code is 5x5 and starts at (0,0) and (4,0), which are not opposite corners. [single-pass]"
+    ],
+    "09/11": [
+      "weak",
+      "Text says train slip ~ U[0,0.4] but code trains U[0,0.3]; the printed takeaway is hard-coded. Further-reading ADR citation also points to the wrong title. [single-pass]"
+    ],
+    "09/12": [
+      "wrong",
+      "Dates DeepSeek-R1 to 2024; its arXiv v1 was submitted 22 Jan 2025, and the same lesson later says 2025."
     ],
     "10/02": [
       "wrong",
@@ -77,6 +501,106 @@
       "weak",
       "Mixes AutoGen 0.2/0.4 APIs (AutoGen has since moved to maintenance mode); dangling cross-refs; empty quiz explanations"
     ],
+    "12/01": [
+      "wrong",
+      "Says SigLIP 2 uses 2D-RoPE and that SigLIP pools by mean; SigLIP 2 uses learned position embeddings and a MAP attention-pool head."
+    ],
+    "12/02": [
+      "wrong",
+      "Says CLIP-class and OpenCLIP-G models cap near 76% ImageNet zero-shot; OpenCLIP ViT-G/14 reports 80.1%."
+    ],
+    "12/03": [
+      "weak",
+      "Doc says 256 patch tokens (dim 128) and 32 queries; main.py uses 64 patches (dim 16) and 8 queries."
+    ],
+    "12/04": [
+      "wrong",
+      "Lists ALIGN + LTIP as 4.4B pairs and the table as 1.3B; the Flamingo paper gives ALIGN 1.8B and LTIP 312M (about 2.1B)."
+    ],
+    "12/05": [
+      "wrong",
+      "Comparison table gives the MLP projector as 40M trainable params; 1024x4096 + 4096x4096 is about 21M, and the body itself says ~22M."
+    ],
+    "12/06": [
+      "wrong",
+      "Lists NaFlex sequence lengths as 256, 729, 1024; SigLIP 2 trained NaFlex on 128, 256, 576, 784, 1024 (729 is not one)."
+    ],
+    "12/07": [
+      "weak",
+      "Doc says SigLIP beats CLIP by 3+ MMMU and claims a fixed-13B controlled study; main.py prints +2.5 and treats LLM size as a varying axis. [single-pass]"
+    ],
+    "12/08": [
+      "weak",
+      "Doc's 2x2 pooling of 729 patches gives 182 per tile and 1820 total; the code's own pooling yields 169 per tile and 1690 total. [single-pass]"
+    ],
+    "12/09": [
+      "wrong",
+      "Doc says Qwen2-VL-7B beat GPT-4o on DocVQA 94.5 vs 88.4; the Qwen2-VL report gives GPT-4o 92.8."
+    ],
+    "12/10": [
+      "wrong",
+      "Doc says InternVL3 trains from scratch; the InternVL3 report initializes its ViT and LLM from pre-trained weights."
+    ],
+    "12/11": [
+      "wrong",
+      "Doc gives Chameleon's final vocabulary as 40192; the Chameleon paper states a vocabulary of 65,536 including the 8192 image codes."
+    ],
+    "12/12": [
+      "wrong",
+      "Doc says Llama-2-7B pretraining took 2k-4k GPU-years; Meta reports 184,320 A100 GPU-hours (about 21 GPU-years) for 7B."
+    ],
+    "12/13": [
+      "weak",
+      "The toy 'trainer' has no learnable parameters: losses are functions of the step counter and target, so the printed loss curve is an artifact, not training. [single-pass]"
+    ],
+    "12/14": [
+      "weak",
+      "Doc says the schedule's step 0 masks everything (ratio 1.0); the code's cosine uses t+1, printing 0.981 at step 0. Minor mismatch."
+    ],
+    "12/15": [
+      "wrong",
+      "Janus-Pro-7B scores MMMU 41.0, not 60.3, so the claim that it matches LLaVA on MMMU is false; the code table repeats 60.3."
+    ],
+    "12/16": [
+      "wrong",
+      "MIO has no music modality; SEED codebook is 8192 with 32 tokens/image; SpeechTokenizer emits 50 tokens/s, so a layer-0 token is 20 ms."
+    ],
+    "12/17": [
+      "weak",
+      "Demo prints 'dynamic (12 frames total)' but max(1, round()) per second yields 15 samples on the same motion input."
+    ],
+    "12/18": [
+      "wrong",
+      "LongVA was trained at 224K context, not 2M; LongVILA uses its own MM-SP, not ring attention; Gemini's 99.7% recall is at 1M tokens."
+    ],
+    "12/19": [
+      "wrong",
+      "AF3 uses Qwen2.5-7B, an MLP adaptor and AF-Whisper, not a Qwen2 8B backbone, Whisper+BEATs concat, or a 64-query Q-former."
+    ],
+    "12/20": [
+      "wrong",
+      "Qwen3-Omni Thinker is a 30B-A3B MoE (Talker 3B-A0.3B), not an 80B Thinker with a larger Talker."
+    ],
+    "12/21": [
+      "wrong",
+      "RT-2 used PaLI-X and PaLM-E, not PaLM-X; GR00T N1 System 2 runs at 10 Hz and System 1 at 120 Hz, not ~1 Hz and 50-100 Hz."
+    ],
+    "12/22": [
+      "wrong",
+      "Says PaliGemma 2 came out April 2025; arXiv 2412.03555 was submitted 2024-12-04."
+    ],
+    "12/23": [
+      "clean",
+      "read in full; no confirmed error (a flagged issue was refuted on re-check)"
+    ],
+    "12/24": [
+      "wrong",
+      "Cites REACT as arXiv:2301.10382, which resolves to an unrelated quantum-physics paper (Pan & Wu, PT-symmetric two-level systems)."
+    ],
+    "12/25": [
+      "wrong",
+      "Says open SOTA Qwen2.5-VL-72B is ~85% on ScreenSpot-Pro; published score is 43.6% (85-87 is plain ScreenSpot). Code runs 2 tasks, not 10."
+    ],
     "13/01": [
       "wrong",
       "Says parallel tool use is opt-in on Anthropic; it is the default"
@@ -109,9 +633,21 @@
       "wrong",
       "Calls OTel GenAI semantic conventions stable; they are still in Development"
     ],
+    "13/21": [
+      "ok",
+      "Portkey gateway open-sourced March 2026 verified"
+    ],
     "13/23": [
       "ok",
       "Tasks-extension changes matched spec (tasks/cancel unchecked)"
+    ],
+    "13/24": [
+      "ok",
+      "Skill catalog entry of about 100 tokens matches the Agent Skills spec"
+    ],
+    "13/27": [
+      "ok",
+      "GitSkills dataset figures verified"
     ],
     "14/01": [
       "stale",
@@ -193,6 +729,10 @@
       "ok",
       "AI Scientist-v2 and Beel et al. verified"
     ],
+    "15/06": [
+      "stale",
+      "Treats Opus 4.6 as the frontier model; transfer result weaker than the lesson implies"
+    ],
     "15/07": [
       "ok",
       "RSP v3.0 correct; workshop dates imprecise"
@@ -249,43 +789,367 @@
       "wrong",
       "Misattributed paper; epsilon proxy never reaches the claimed range; no canary code despite the doc"
     ],
-    "13/21": [
-      "ok",
-      "Portkey gateway open-sourced March 2026 verified"
+    "19/01": [
+      "weak",
+      "Sandbox claim not met: run_shell runs arbitrary shell on the host with only cwd set, no isolation."
     ],
-    "13/24": [
-      "ok",
-      "Skill catalog entry of about 100 tokens matches the Agent Skills spec"
+    "19/02": [
+      "weak",
+      "Fake embeddings use salted str hash(), so the 'deterministic' offline index and its rankings change between Python runs. [single-pass]"
     ],
-    "13/27": [
-      "ok",
-      "GitSkills dataset figures verified"
+    "19/03": [
+      "clean",
+      "read in full; no error found (single pass)"
     ],
-    "15/06": [
-      "stale",
-      "Treats Opus 4.6 as the frontier model; transfer result weaker than the lesson implies"
+    "19/04": [
+      "wrong",
+      "Claim of under 0.5% accuracy loss at 50% pruning is contradicted by DocPruner paper (ColQwen2.5 -0.69%); DocPruner is Sep 2025, not 2026."
+    ],
+    "19/05": [
+      "weak",
+      "Doc says node score is a product (novelty x quality x budget); code computes a weighted sum, so the stated formula does not match. [single-pass]"
+    ],
+    "19/06": [
+      "weak",
+      "Ranking uses literal specificity constants, not evidence; node-level hypothesis is unreachable since Deployment has no direct Node edge."
+    ],
+    "19/07": [
+      "wrong",
+      "Model Openness Framework link points to isocpp.org (the C++ standard site); MOF is an LF AI & Data framework from 2024, not a 2026 standard."
+    ],
+    "19/08": [
+      "weak",
+      "Input guard is a regex stub, yet its block message says 'blocked by Llama Guard 4'; the Llama Guard 4 guard the doc describes is not implemented. [single-pass]"
+    ],
+    "19/09": [
+      "wrong",
+      "Lesson says MigrationBench has a 50-repo subset; AWS reports 5,102 full repos and a 300-repo selected subset."
+    ],
+    "19/10": [
+      "weak",
+      "Reviewer and baseline outcomes are injected constants (85% catch, hard-coded 0.68 baseline), so the printed team-vs-baseline result is not measured. [single-pass]"
+    ],
+    "19/11": [
+      "weak",
+      "Drift detector hashes prompts into 8 sha256 buckets, not embeddings, so the PSI drift signal is noise and cannot catch the PII regression. [single-pass]"
+    ],
+    "19/12": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/13": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/14": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/15": [
+      "wrong",
+      "Says Constitutional Classifiers are used during training rather than serving; Anthropic says trained classifiers are deployed as safeguards. Sanitize also omits rot13."
+    ],
+    "19/16": [
+      "weak",
+      "Code fails the run on coverage drop instead of opening a needs-review PR as the doc says, and uses 20 turns where the doc says 30. [single-pass]"
+    ],
+    "19/17": [
+      "weak",
+      "Simulated efficacy 'delta' is built in: the adaptive arm gets a direct mastery bonus and easier difficulty, so the result is true by construction. [single-pass]"
+    ],
+    "19/20": [
+      "weak",
+      "Doc says hooks can return a sentinel to skip the next step, but fire() discards return values and only before_tool_call catches HookAbort. [single-pass]"
+    ],
+    "19/21": [
+      "weak",
+      "Doc says the validator does not coerce types, but enum uses Python equality, so True matches enum value 1 and 1.0 matches 1. [single-pass]"
+    ],
+    "19/22": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/23": [
+      "weak",
+      "Idempotency check runs before the semaphore, but _inflight is registered only after acquiring it, so same-key calls queued behind a full semaphore both run the handler. [single-pass]"
+    ],
+    "19/24": [
+      "weak",
+      "Doc's planner table keys on last_error matching X or Y, but the code picks branches by a recovery flag; give_up ignores the error text entirely."
+    ],
+    "19/25": [
+      "weak",
+      "RecencyGate never recovers: denied calls are not recorded, so the gap only grows and every later call is refused, including the fresh read the gate is meant to force. [single-pass]"
+    ],
+    "19/26": [
+      "weak",
+      "Doc says timeout kills the process group; run() kills only the direct child (Python docs). Path jail also skips dash-prefixed args that contain slashes. [single-pass]"
+    ],
+    "19/27": [
+      "weak",
+      "Doc says shell_exit_zero runs through the lesson-26 sandbox; code calls subprocess.run directly, as its own docstring admits. [single-pass]"
+    ],
+    "19/28": [
+      "wrong",
+      "Span id is 8 bytes (16 hex) per W3C, not 16 bytes; gen_ai.system is deprecated, so 'never renamed' is false."
+    ],
+    "19/29": [
+      "weak",
+      "Doc says the policy identifies the bug via a regex; code uses substring checks and the same hard-coded fix in both branches. [single-pass]"
+    ],
+    "19/30": [
+      "weak",
+      "Doc says the pretokenizer splits on punctuation too; the code splits only on whitespace, so merges can cross punctuation. [single-pass]"
+    ],
+    "19/31": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/32": [
+      "wrong",
+      "Lower sinusoid dimensions have the shortest wavelengths (fine position); the doc reverses this. Wavelength grows with i in the code."
+    ],
+    "19/33": [
+      "unverified",
+      "Headline claim (loss well under 1.0 after 3 epochs on CPU) cannot be checked without running; the demo only asserts loss falls."
+    ],
+    "19/34": [
+      "wrong",
+      "Claims GPT-2, LLaMA and Mistral ship fused QKV; LLaMA reference code uses separate wq/wk/wv and SwiGLU, not plain SiLU."
+    ],
+    "19/35": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/36": [
+      "weak",
+      "Demo comment says eval loss should drop, but shipped losses.jsonl val_loss rises from 6.58 to 7.49, above the 5.55 uniform baseline. [single-pass]"
+    ],
+    "19/37": [
+      "wrong",
+      "Problem text gives the pretrained c_attn weight shape as (2304, 768); the lesson's own table and the HF Conv1D source both give (768, 2304)."
+    ],
+    "19/38": [
+      "wrong",
+      "Doc says messages are 5 to 25 tokens, but templates give about 23 to 47 bytes and ByteTokenizer truncates at max_len 32."
+    ],
+    "19/39": [
+      "weak",
+      "Doc gives max length 64 but SFTConfig uses max_len=96; module docstring says exit depends on EM vs 0.0, but run_demo only checks loss. [single-pass]"
+    ],
+    "19/40": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/41": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/42": [
+      "wrong",
+      "Doc says b=32, r=4 gives a sharp threshold at s=0.8; (1/b)^(1/r) is about 0.42, and at s=0.8 P(collide)=1-(1-0.8^4)^32 is about 1."
+    ],
+    "19/43": [
+      "weak",
+      "Doc says shards are written in parallel; write_corpus writes them sequentially in a for loop."
+    ],
+    "19/44": [
+      "ok",
+      "Verified both cited arXiv papers (SGDR 1608.03983 and AdamW 1711.05101 by Loshchilov and Hutter); no error found in schedule math. [single-pass]"
+    ],
+    "19/45": [
+      "weak",
+      "Doc says scaler.update() runs on every skip; the loss-skip path in code deliberately passes update_scaler=False."
+    ],
+    "19/46": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/47": [
+      "ok",
+      "Verified CVE-2025-32434 as a weights_only=True RCE fixed in PyTorch 2.6.0, matching the doc; no other error found. [single-pass]"
+    ],
+    "19/48": [
+      "weak",
+      "Doc says the FSDP round trip asserts bit-equal reconstruction; code only checks torch.allclose."
+    ],
+    "19/49": [
+      "wrong",
+      "Claims the exec sandbox stops filesystem access; stripped __builtins__ is escapable via __subclasses__() and catch_warnings."
+    ],
+    "19/50": [
+      "weak",
+      "Doc says the seed changes the draft; MockLLM indexes a bank by seed, and every shipped demo bank has one entry, so seed has no effect. [single-pass]"
+    ],
+    "19/51": [
+      "weak",
+      "Doc says corpus papers are hand written; code generates every title and abstract from a f-string template. [single-pass]"
+    ],
+    "19/52": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/53": [
+      "weak",
+      "Doc says mismatched seeds raise PairingError; code silently keeps only shared seeds and raises only when none are shared. [single-pass]"
+    ],
+    "19/54": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/55": [
+      "weak",
+      "Doc says flat scores end with verdict budget; code's plateau rule fires after two flat rounds (round 3), so the verdict is plateau. [single-pass]"
+    ],
+    "19/56": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/57": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/58": [
+      "wrong",
+      "Token count wrong: 224x224 RGB has 50,176 pixel positions; 150,528 is the scalar value count (224*224*3), so the 22.6 billion figure is also wrong."
+    ],
+    "19/59": [
+      "wrong",
+      "Further Reading credits the DINOv2 paper for register tokens; registers were introduced by Darcet et al. 2023 (arXiv 2309.16588)."
+    ],
+    "19/60": [
+      "weak",
+      "Text says the frozen vision encoder has 86M params, but main.py trains a 4-layer, mlp_ratio 2 encoder instead of ViT-Base. [single-pass]"
+    ],
+    "19/61": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/62": [
+      "weak",
+      "Doc says only the decoder gets LM-loss gradient, but the code feeds encoder memory into the decoder, so LM loss reaches the encoder. [single-pass]"
+    ],
+    "19/63": [
+      "wrong",
+      "Chen and Cherry method 1 adds epsilon to zero numerators; add-1 to numerator and denominator is their method 2 (NLTK, mbrs docs)."
+    ],
+    "19/64": [
+      "unverified",
+      "LongRAG abstract does not report a 35-point chunking recall swing; the figure is unsourced, and the demo table outputs were not reproduced."
+    ],
+    "19/65": [
+      "weak",
+      "Doc says the paraphrased query lands at BM25 rank 6, but the demo caps BM25 results at 5, so that rank cannot appear in the output."
+    ],
+    "19/66": [
+      "weak",
+      "Doc demands train/eval separation, but the demo queries are exactly its training queries, so the reranked output is not held-out evidence. [single-pass]"
+    ],
+    "19/67": [
+      "weak",
+      "Demo prints a hard-coded 'expected winner' marker, so the claimed per-strategy win is asserted by a label, not measured. [single-pass]"
+    ],
+    "19/68": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/69": [
+      "weak",
+      "Objective promises the staged build beats isolated stages on every metric; demo only checks absolute thresholds, never isolated stages."
+    ],
+    "19/70": [
+      "weak",
+      "Doc says the validator rejects any prompt with an embedded few-shot block; code rejects it only when no few_shot_examples list is given."
+    ],
+    "19/71": [
+      "wrong",
+      "Chen and Cherry number add-one smoothing as Method 2 (Lin and Och style), applying it only for n>1; the lesson calls it method 1 and smooths n=1 too."
+    ],
+    "19/72": [
+      "wrong",
+      "Claims HumanEval and peers use a subprocess sandbox; HumanEval runs candidates in a multiprocessing.Process calling exec, not a subprocess."
+    ],
+    "19/73": [
+      "unverified",
+      "WikiText-103 perplexity range for 2026 models is asserted without a source; the ECE, Brier and perplexity code matches standard definitions."
+    ],
+    "19/74": [
+      "weak",
+      "Doc says win-rate splits ties, but the code and the doc's own win_rate snippet give every tied model a full win. [single-pass]"
+    ],
+    "19/75": [
+      "weak",
+      "Demo ranks rule_based first by construction (it returns gold targets), and the promised JSON envelope and structured error are never printed. [single-pass]"
+    ],
+    "19/76": [
+      "wrong",
+      "broadcast never terminates for src=1 on 4 ranks: partners h+2^r exceed world_size, so has_value stalls at 3 ranks and the while loop spins forever."
+    ],
+    "19/77": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/78": [
+      "weak",
+      "Optimiser-state figure assumes fp16 Adam moments; standard mixed-precision Adam keeps fp32 states, so 28 GB understates it"
+    ],
+    "19/79": [
+      "unverified",
+      "Claim that Megatron-LM's --num-layers-per-stage accepts a list could not be verified; search found no such flag (Megatron documents other uneven-split options)."
+    ],
+    "19/80": [
+      "weak",
+      "Objectives promise byte-equal verification of ZeRO optimiser state on resume, but the round-trip assert checks only param_shard, not m/v or master shards. [single-pass]"
+    ],
+    "19/81": [
+      "weak",
+      "Doc says the demo verifies four invariants, but loss monotonicity, norm drift and the memory formula are only printed, not asserted"
+    ],
+    "19/82": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/83": [
+      "weak",
+      "Doc says rot13 is kept only if the candidate has more dictionary words than the input; code checks only the candidate's count (>=2). [single-pass]"
+    ],
+    "19/84": [
+      "weak",
+      "Doc's example says the model slips on multi-turn-ramp, but the shipped report shows 0.0 multi-turn under-refusal for Strict and Leaky. [single-pass]"
+    ],
+    "19/85": [
+      "clean",
+      "read in full; no error found (single pass)"
+    ],
+    "19/86": [
+      "weak",
+      "Doc says the loader reads YAML or a built-in JSON file; code only calls load_yaml, which is YAML or a YAML-subset parser, with no JSON path. [single-pass]"
+    ],
+    "19/87": [
+      "weak",
+      "Code maps detector conf 0.5-0.85 to redact (doc says warn) and conf below 0.5 to warn (doc says allow); traces 95e4d62c and 70f550d4 confirm. [single-pass]"
     ]
   },
   "phase_trust": {
-    "00": "Not audited.",
+    "00": "All 13 lessons read in full (second pass, 2026-10-15): 1 stale, 3 unverified, 1 ok, 8 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "01": "2 lessons sampled: one sound, one with a statistical-advice error.",
-    "02": "Not audited.",
+    "02": "All 21 lessons read in full (second pass, 2026-10-15): 3 wrong, 1 stale, 6 weak, 3 ok, 8 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "03": "2 lessons sampled, both flawed (buggy doc code, bogus benchmark).",
-    "04": "Not audited.",
+    "04": "All 28 lessons read in full (second pass, 2026-10-15): 15 wrong, 1 stale, 2 weak, 4 ok, 6 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "05": "2 lessons sampled: attention lesson strong, NLI lesson has false claims.",
-    "06": "Not audited.",
+    "06": "All 17 lessons read in full (second pass, 2026-10-15): 10 wrong, 5 weak, 1 unverified, 1 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "07": "2 lessons sampled: speculative-decoding math right, T5/BART is a stub.",
-    "08": "Not audited.",
-    "09": "Not audited.",
+    "08": "All 15 lessons read in full (second pass, 2026-10-15): 9 wrong, 2 stale, 1 ok, 3 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
+    "09": "All 12 lessons read in full (second pass, 2026-10-15): 3 wrong, 1 stale, 3 weak, 1 unverified, 4 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "10": "2 lessons sampled, both with serious errors (tokenizer, fabricated quantization numbers).",
     "11": "All lessons swept for model, price and version claims. Flagged lessons are listed; an unflagged lesson only means no error was recorded, not that it was verified. Pricing, model and context-window numbers are mostly wrong or stale; LoRA advice contradicts its source paper.",
-    "12": "Not audited.",
+    "12": "All 25 lessons read in full (second pass, 2026-10-15): 18 wrong, 6 weak, 1 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision).",
     "13": "Claims swept in lessons 01-12 and 20-27. Specific claims verified in 06, 07, 09, 11, 12 and 23 (match the MCP spec) and 21, 24, 27; lessons 08, 10, 13-19 and 28-45 not individually audited. API comparisons (01-03) and OTel (20) have errors.",
     "14": "Claims swept in lessons 01-10 and 30-40: paper citations reliable; 17 and 28 (sampled separately) are thin toys; 31-40 lean on unverifiable blog anecdotes. Lessons 11-29 mostly not audited.",
     "15": "Lessons 01-08 fact-checked: mostly correct, some outdated vendor and benchmark status.",
     "16": "2 lessons sampled: thin, heavy overlap with 14/28 and 11/17.",
     "17": "Lessons 01-10 fact-checked: weakest phase factually (wrong parameter count, misread benchmark, stale versions).",
     "18": "2 lessons sampled: real citations but toy code that does not support the text; one misattribution.",
-    "19": "Not audited. Capstone projects; see repo-guide.md."
+    "19": "All 85 lessons read in full (second pass, 2026-10-15): 17 wrong, 43 weak, 4 unverified, 2 ok, 19 clean. Flagged WRONG and stale items were independently re-verified; weak, ok and clean come from a single reader (weak was spot-checked at about 94% precision)."
   }
 }

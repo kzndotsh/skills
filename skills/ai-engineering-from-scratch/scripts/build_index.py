@@ -13,7 +13,7 @@ REPO_URL = "https://github.com/rohitg00/ai-engineering-from-scratch"
 RAW = "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch"
 HERE = Path(__file__).resolve().parent
 FLAGS = json.loads((HERE / "audit_flags.json").read_text())
-LEVEL_LABEL = {"ok": "ok", "wrong": "WRONG", "stale": "stale", "weak": "weak", "unverified": "unverified"}
+LEVEL_LABEL = {"clean": "clean", "ok": "ok", "wrong": "WRONG", "stale": "stale", "weak": "weak", "unverified": "unverified"}
 
 
 def cell(text, limit):
@@ -92,7 +92,7 @@ def build_paths(repo, out, commit):
         "# Learning paths", "",
         f"Source: `learning-paths/*.json` at commit `{commit}`. Each path is an ordered lesson route with time estimates. "
         "Paths whose JSON lists `invocation` also exist as in-repo tutor skills. Hour estimates in the upstream README for the two longest routes are wrong; use the minutes below. "
-        "The bracket after each lesson is its audit status (see trust-guide.md; labels: ok, WRONG, stale, weak, unverified, not audited); optional lessons come last.", "",
+        "The bracket after each lesson is its audit status (see trust-guide.md; labels: ok, clean, WRONG, stale, weak, unverified, not audited); optional lessons come last.", "",
         "## Contents", "",
     ]
     files = sorted((repo / "learning-paths").glob("*.json"))

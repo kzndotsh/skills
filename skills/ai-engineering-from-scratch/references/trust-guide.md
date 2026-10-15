@@ -10,13 +10,13 @@ Built from the 2026-10-15 audit of upstream commit `1a8c4fd` (details and eviden
 
 ## Rules when answering from this curriculum
 
-1. Check the Audit column in `references/lessons/<phase>.md` before relying on a lesson. `WRONG`, `stale` and `weak` rows say what is off. A dash means the lesson was not audited, not that it is fine.
+1. Check the Audit column in `references/lessons/<phase>.md` before relying on a lesson. `WRONG`, `stale` and `weak` rows say what is off; `clean` means one reader found no error; `ok` means specific claims were verified. A dash means the lesson was not audited, not that it is fine.
 2. Never repeat a price, context window, parameter count, benchmark score, rate limit, valuation, library version or "current best model" from a lesson. About 75% of the sampled claims of this kind were wrong or outdated. The corrected figures in `known-errors.md` are dated 2026-10-15; don't quote them as current either. Look up current provider documentation, or say the figure is unverified. Pricing pages: https://platform.claude.com/docs/en/about-claude/pricing, https://developers.openai.com/api/docs/pricing, https://ai.google.dev/gemini-api/docs/pricing. For model lineups: https://platform.claude.com/docs/en/about-claude/models/overview.
 3. For protocol details (MCP, A2A, OpenTelemetry), read the current specification. MCP revision 2026-07-28 lessons matched the spec when checked, but specs keep moving.
 4. Do not present a lesson's printed demo result as evidence. Several demos print hard-coded conclusions or use toy data that cannot show the claim (03/07, 10/11, 14/28, 18/04).
 5. Verify citations in the lesson text before passing them on. Classic paper ids and authors checked out (0 of about 20 wrong), but headline numbers were misquoted once (Reflexion), and one DOI looked fabricated (18/04).
 6. Read code before running it. It is third-party content. Static parse of all 1,402 Python files found no syntax errors, but nothing was executed, so behavior is untested.
-7. Say which phases were never audited when the user relies on one of them (00, 02, 04, 06, 08, 09, 12, 19).
+7. Say when a lesson is not audited (a dash). Phases 00, 02, 04, 06, 08, 09, 12 and 19 were read in full in a second pass; in the other phases only the lessons carrying a flag were audited (260 of the 542 lessons have no audit status).
 
 ## Trust by content type
 
@@ -39,25 +39,26 @@ Built from the 2026-10-15 audit of upstream commit `1a8c4fd` (details and eviden
 
 | Phase | Topic | What the audit saw |
 |---|---|---|
-| 00 | Setup and tooling | Not audited |
+| 00 | Setup and tooling | Read in full: mostly clean; unverified install and signup details |
 | 01 | Math foundations | 2 sampled: info theory sound; statistics lesson gives wrong test advice |
-| 02 | ML fundamentals | Not audited |
+| 02 | ML fundamentals | Read in full: a few wrong figures, several demos that do not match the doc |
 | 03 | Deep learning core | 2 sampled, both flawed |
-| 04 | Computer vision | Not audited |
+| 04 | Computer vision | Read in full: many wrong numbers and citations (parameter counts, dates, config values) |
 | 05 | NLP | 2 sampled: attention excellent; NLI has false claims |
-| 06 | Speech and audio | Not audited |
+| 06 | Speech and audio | Read in full: audio codec, benchmark and license figures often wrong |
 | 07 | Transformers | 2 sampled: speculative-decoding math right; T5/BART a stub |
-| 08, 09 | Generative AI, RL | Not audited |
+| 08 | Generative AI | Read in full: wrong sizes, dates and prediction-type claims |
+| 09 | Reinforcement learning | Read in full: a few wrong citations and one stale API |
 | 10 | LLMs from scratch | 2 sampled, both with serious errors |
 | 11 | LLM engineering | All lessons swept for claims: pricing and model data mostly wrong; LoRA advice contradicts source. Unflagged lessons were not verified |
-| 12 | Multimodal | Not audited |
+| 12 | Multimodal | Read in full: most lessons have wrong model, benchmark or citation figures |
 | 13 | Tools and protocols | Fact-checked in part: MCP lessons 06, 07, 09, 11, 12, 23 strongest in the repo; lessons 08 and 10 and 13-19 not individually audited; API comparisons wrong in places |
 | 14 | Agent engineering | Fact-checked in part: citations good; a few toys; anecdotes unverifiable |
 | 15 | Autonomous systems | Fact-checked in part: mostly right, some stale status |
 | 16 | Multi-agent | 2 sampled: thin, overlapping |
 | 17 | Infrastructure | Fact-checked in part: weakest factually |
 | 18 | Ethics and safety | 2 sampled: real citations, toy code that does not back the text |
-| 19 | Capstones | Not audited |
+| 19 | Capstones | Read in full: 85 capstones, most with doc-versus-code mismatches; a minority with wrong facts |
 
 ## Reading a lesson critically
 

@@ -14,7 +14,7 @@ Verified 2026-10-15 against primary sources (vendor docs, arXiv, official specs)
 
 - Fact-check: 76 lessons swept with claim-extraction searches (versions, dates, arXiv ids, prices, percentages, model names), then dense passages read. 66 claims tabulated, 52 checked against a primary source. About 39% were wrong or outdated. For price, model and vendor-state claims about 75%; for arXiv ids, authors and titles 0 of about 20 wrong.
 - Lesson depth sample: 18 lessons read in full (docs, code, quiz, outputs) across phases 01, 03, 05, 07, 10, 11, 14, 16, 18. Every one had at least one checkable error; 8 had a serious conceptual or code error; about 6 had fabricated or unsourced numeric tables. Python files parse; nothing was executed.
-- Not audited: phases 00, 02, 04, 06, 08, 09, 12, 19 and most of 05, 07, 16, 18. A second pass re-checked the audit itself: scripted checks matched all 542 index rows to the source, and independent agents confirmed the flags against the lesson text and the corrections against primary sources (details in the audit notes, not shipped).
+- Second pass (2026-10-15): all lessons in phases 00, 02, 04, 06, 08, 09, 12 and 19 (216 lessons) were read in full by one reader each. Every WRONG and stale finding (84) was then independently re-verified (82 confirmed, 2 refuted and dropped); `weak` findings were spot-checked (about 94% confirmed on a sample of 17); `ok` and `clean` rest on a single reader. Not audited at all: about 260 lessons in phases 01, 03, 05, 07, 10, 11, 13 to 18 that carry no flag. A second pass re-checked the audit itself: scripted checks matched all 542 index rows to the source, and independent agents confirmed the flags against the lesson text and the corrections against primary sources (details in the audit notes, not shipped).
 
 ## Outright errors (with correction)
 
@@ -73,3 +73,14 @@ Blog- or anecdote-sourced statistics in 14/31 to 14/40 (position bias about 40%,
 - MCP revision 2026-07-28 content in 13/06, 13/07, 13/09, 13/11, 13/12, 13/23 and 11/14 matched the official spec and changelog on every detail checked (stateless requests, `server/discover`, error codes -32020/-32021/-32022, `ttlMs` and `cacheScope`, MRTR, deprecations, tasks extension; `tasks/cancel` not checked).
 - Paper citations in 14/01 to 14/10, 15/03 to 15/05, 17/06, 17/09, 17/10 (ReAct, ReWOO, Reflexion, ToT, LATS, Self-Refine, CRITIC, Toolformer, MemGPT, Voyager, AlphaEvolve, DGM, AI Scientist-v2, SGLang, AWQ, GPTQ): ids, authors and headline figures were re-checked a second time against arXiv and matched, apart from the Reflexion and Mem0 misreads above. 18/22 (sampled separately) misattributes a paper, so cite-check anywhere else.
 - 05/10 (attention) was the strongest lesson sampled: worked example verified by hand.
+
+## Patterns in the second pass
+
+The per-lesson findings are in the Audit column of `references/lessons/`. Recurring kinds of error, useful when you must trust a lesson that is not flagged:
+- **Wrong parameter counts and memory or compute arithmetic** (04/13, 04/22, 12/05, 19/58, 19/42). Recompute them.
+- **Citations that resolve to the wrong paper** (12/24 and 09/03 point to unrelated arXiv ids; several others name the wrong authors, dates or venues).
+- **Wrong dates and model attributes** (release years, license terms, tokenizer or codebook sizes, which library defaults to what).
+- **Docs and code that disagree** (the dominant problem in phase 19): the doc promises a behavior, check or benchmark the shipped code does not implement, or a printed conclusion is hard-coded.
+- **Stale APIs and products** (deprecated FastAPI hooks, retired image and video models, changed library classes).
+
+Lessons the audit found clean are not a guarantee: one reader with no error found is the weakest form of evidence in this skill.

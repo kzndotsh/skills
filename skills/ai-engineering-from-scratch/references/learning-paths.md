@@ -1,6 +1,6 @@
 # Learning paths
 
-Source: `learning-paths/*.json` at commit `1a8c4fd`. Each path is an ordered lesson route with time estimates. Paths whose JSON lists `invocation` also exist as in-repo tutor skills. Hour estimates in the upstream README for the two longest routes are wrong; use the minutes below. The bracket after each lesson is its audit status (see trust-guide.md; labels: ok, WRONG, stale, weak, unverified, not audited); optional lessons come last.
+Source: `learning-paths/*.json` at commit `1a8c4fd`. Each path is an ordered lesson route with time estimates. Paths whose JSON lists `invocation` also exist as in-repo tutor skills. Hour estimates in the upstream README for the two longest routes are wrong; use the minutes below. The bracket after each lesson is its audit status (see trust-guide.md; labels: ok, clean, WRONG, stale, weak, unverified, not audited); optional lessons come last.
 
 ## Contents
 
@@ -58,9 +58,9 @@ Build reliable data, feature, embedding, retrieval, evaluation, and observabilit
 
 Estimated 915 min (about 15 h), 11 required lessons.
 
-1. `phases/00-setup-and-tooling/09-data-management` Data Management (45 min) [not audited]
-2. `phases/02-ml-fundamentals/08-feature-engineering` Feature Engineering & Selection (90 min) [not audited]
-3. `phases/02-ml-fundamentals/13-ml-pipelines` ML Pipelines (120 min) [not audited]
+1. `phases/00-setup-and-tooling/09-data-management` Data Management (45 min) [stale: Says GitHub gives 1 GB free for Git LFS; GitHub's current Free plan lists 10 GiB storage…]
+2. `phases/02-ml-fundamentals/08-feature-engineering` Feature Engineering & Selection (90 min) [WRONG: Citation title is wrong: the Micci-Barreca 2001 paper is 'A preprocessing scheme for high…]
+3. `phases/02-ml-fundamentals/13-ml-pipelines` ML Pipelines (120 min) [stale: Presents MLflow registry stages (Staging/Production/Archived) as current; MLflow deprecat…]
 4. `phases/10-llms-from-scratch/03-data-pipelines` Data Pipelines for Pre-Training (90 min) [not audited]
 5. `phases/11-llm-engineering/04-embeddings` Embeddings & Vector Representations (75 min) [stale: Gemini Embedding 2 price wrong]
 6. `phases/11-llm-engineering/05-context-engineering` Context Engineering: Windows, Budgets, Memory, and Retrieval (90 min) [stale: Context windows wrong or outdated for the Anthropic and Gemini models named]
@@ -76,7 +76,7 @@ Build credible integrations, examples, and reusable agent packages, then turn de
 
 Estimated 905 min (about 15 h), 11 required lessons.
 
-1. `phases/00-setup-and-tooling/04-apis-and-keys` APIs & Keys (30 min) [not audited]
+1. `phases/00-setup-and-tooling/04-apis-and-keys` APIs & Keys (30 min) [unverified: Default model id claude-sonnet-5 and the $5 signup credit could not be confirmed on offic…]
 2. `phases/13-tools-and-protocols/01-the-tool-interface` The Tool Interface — Why Agents Need Structured I/O (45 min) [WRONG: Says parallel tool use is opt-in on Anthropic; it is the default]
 3. `phases/13-tools-and-protocols/05-tool-schema-design` Tool Schema Design — Naming, Descriptions, Parameter Constraints (45 min) [not audited]
 4. `phases/13-tools-and-protocols/06-mcp-fundamentals` MCP Fundamentals: Stateless Requests and JSON-RPC (55 min) [ok: MCP stateless details matched official spec and changelog]
@@ -94,7 +94,7 @@ Measure model and agent behavior, expose failure modes, instrument the runtime, 
 
 Estimated 750 min (about 12 h), 12 required lessons.
 
-1. `phases/02-ml-fundamentals/09-model-evaluation` Model Evaluation (90 min) [not audited]
+1. `phases/02-ml-fundamentals/09-model-evaluation` Model Evaluation (90 min) [clean: read in full; no error found (single pass)]
 2. `phases/11-llm-engineering/10-evaluation` Evaluation & Testing LLM Applications (45 min) [stale: Treats Opus 4.7 as the frontier model]
 3. `phases/14-agent-engineering/30-eval-driven-agent-development` Eval-Driven Agent Development (60 min) [not audited]
 4. `phases/14-agent-engineering/26-failure-modes-agentic` Failure Modes: Why Agents Break (60 min) [not audited]
@@ -231,13 +231,13 @@ Build the repository, debugging, testing, interface, security, release, and oper
 
 Estimated 730 min (about 12 h), 13 required lessons.
 
-1. `phases/00-setup-and-tooling/01-dev-environment` Dev Environment (45 min) [not audited]
-2. `phases/00-setup-and-tooling/02-git-and-collaboration` Git & Collaboration (60 min) [not audited]
-3. `phases/00-setup-and-tooling/06-python-environments` Python Environments (45 min) [not audited]
-4. `phases/00-setup-and-tooling/07-docker-for-ai` Docker for AI (60 min) [not audited]
-5. `phases/00-setup-and-tooling/09-data-management` Data Management (60 min) [not audited]
-6. `phases/00-setup-and-tooling/10-terminal-and-shell` Terminal & Shell (45 min) [not audited]
-7. `phases/00-setup-and-tooling/12-debugging-and-profiling` Debugging and Profiling (60 min) [not audited]
+1. `phases/00-setup-and-tooling/01-dev-environment` Dev Environment (45 min) [clean: read in full; no error found (single pass)]
+2. `phases/00-setup-and-tooling/02-git-and-collaboration` Git & Collaboration (60 min) [clean: read in full; no error found (single pass)]
+3. `phases/00-setup-and-tooling/06-python-environments` Python Environments (45 min) [unverified: Claim that CUDA 11.8 builds fail on CUDA 12.x drivers is likely overstated; I could not f…]
+4. `phases/00-setup-and-tooling/07-docker-for-ai` Docker for AI (60 min) [clean: read in full; no error found (single pass)]
+5. `phases/00-setup-and-tooling/09-data-management` Data Management (60 min) [stale: Says GitHub gives 1 GB free for Git LFS; GitHub's current Free plan lists 10 GiB storage…]
+6. `phases/00-setup-and-tooling/10-terminal-and-shell` Terminal & Shell (45 min) [clean: read in full; no error found (single pass)]
+7. `phases/00-setup-and-tooling/12-debugging-and-profiling` Debugging and Profiling (60 min) [unverified: Asserts 80% of AI bugs live at levels 1 and 2 with no source or data behind the figure.]
 8. `phases/13-tools-and-protocols/01-the-tool-interface` The Tool Interface — Why Agents Need Structured I/O (60 min) [WRONG: Says parallel tool use is opt-in on Anthropic; it is the default]
 9. `phases/13-tools-and-protocols/05-tool-schema-design` Tool Schema Design — Naming, Descriptions, Parameter Constraints (60 min) [not audited]
 10. `phases/14-agent-engineering/38-verification-gates` Verification Gates (55 min) [ok: arXiv 2604.01483 is real but a narrow finance-compliance fit]
