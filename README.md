@@ -9,6 +9,7 @@ Agent skills for Claude Code and other agents that read `SKILL.md`. Each folder 
 | Skill | What it does |
 |---|---|
 | [prompt-engineering](skills/prompt-engineering/) | Audited knowledge base for writing and debugging LLM prompts: technique picker (few-shot, CoT, self-consistency, ReAct, RAG, chaining, PAL, ToT, Reflexion), agents and context engineering, reasoning-model prompting, prompt-injection defenses, model notes, and a prompt library. |
+| [arctic-shift](skills/arctic-shift/) | Query archived Reddit posts, comments, threads, subreddits, and users through the free Arctic Shift API when reddit.com blocks automated access: endpoint picker, scoping rules, pagination, and failure modes. |
 
 ## Install
 
