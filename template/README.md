@@ -22,4 +22,4 @@ Copy this folder to `skills/<your-skill-name>/` and edit.
 - Write the `description` for triggering: it is what the agent reads to decide relevance.
 - Test with `npx skills add ./ --list` from the repo root.
 
-This folder sits outside `skills/` on purpose, so the CLI doesn't list it as a skill.
+The template's frontmatter sets `metadata.internal: true` so the CLI doesn't list it as an installable skill (it finds `SKILL.md` files outside `skills/` too). Delete that `metadata` block in your copy.
