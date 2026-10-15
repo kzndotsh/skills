@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Prompting",
+      "description": "Writing, debugging, and hardening LLM prompts.",
+      "skills": ["prompt-engineering"]
+    },
+    {
+      "title": "Research",
+      "description": "Pulling source material that is hard to reach directly.",
+      "skills": ["arctic-shift"]
+    }
+  ]
+}
