@@ -111,7 +111,7 @@ OUR_RAW = "https://raw.githubusercontent.com/kzndotsh/skills/main/"
 def lint_llms(repo):
     """Check llmstxt.org structure, that links into this repo resolve, and that generated llms files are fresh."""
     errors = []
-    files = [f for f in [repo / "llms.txt", *sorted((repo / "skills").glob("*/llms.txt")), *sorted((repo / "skills").glob("*/llms/*.txt"))] if f.is_file()]
+    files = [f for f in [repo / "llms.txt", *sorted((repo / "skills").glob("*/llms.txt"))] if f.is_file()]
     for f in files:
         rel = f.relative_to(repo)
         lines = f.read_text().lstrip("\ufeff").splitlines()

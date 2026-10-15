@@ -61,9 +61,9 @@ Checks every skill under `skills/` against the Agent Skills spec and Claude's au
 [llmstxt.org](https://llmstxt.org/)-style indexes for agents that can fetch a URL but can't install skills:
 
 - [`llms.txt`](llms.txt): the master index. Lists each skill and links to that skill's own index.
-- `skills/<skill>/llms.txt`: one per skill, inside the skill folder. It links the skill's `SKILL.md`, every reference file and any scripts by raw URL. `skills/ai-engineering-from-scratch/` also has `llms/phase-NN.txt` (20 files) covering the 542 upstream lessons at a pinned commit with our audit status, because that many links doesn't fit in one file.
+- `skills/<skill>/llms.txt`: one per skill, inside the skill folder. It links the skill's `SKILL.md`, every reference file and any scripts by raw URL. For `ai-engineering-from-scratch` it is one large file (about 140 KB, roughly 35k tokens) with a section per phase linking all 542 upstream lessons at a pinned commit, each with our audit status.
 
-The master and the generic per-skill files come from `python3 scripts/gen_llms.py`, and lint fails if they are stale. The curriculum files come from that skill's `scripts/build_index.py --llms`. A loaded agent has no use for these files, since `SKILL.md` already indexes the skill; installing a skill copies them along (a few hundred bytes for most skills, about 180 KB of phase files for the curriculum one).
+The master and the generic per-skill files come from `python3 scripts/gen_llms.py`, and lint fails if they are stale. The curriculum file comes from that skill's `scripts/build_index.py --llms`. A loaded agent has no use for these files, since `SKILL.md` already indexes the skill; installing a skill copies them along.
 
 ## Layout
 

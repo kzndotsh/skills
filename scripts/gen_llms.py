@@ -3,7 +3,7 @@
 
 Usage: python3 scripts/gen_llms.py          write llms.txt and skills/<skill>/llms.txt
        python3 scripts/gen_llms.py --check  exit 1 if any generated file is out of date
-The curriculum skill's index (skills/ai-engineering-from-scratch/llms.txt and llms/) is written by that skill's build_index.py.
+The curriculum skill's index (skills/ai-engineering-from-scratch/llms.txt) is written by that skill's build_index.py.
 No dependencies.
 """
 import re
