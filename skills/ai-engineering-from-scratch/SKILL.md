@@ -39,26 +39,26 @@ Each phase file lists every lesson with title, type, time, languages, quiz and o
 
 | Phase | Topic | Lessons | Audited | Index file |
 |---|---|---|---|---|
-| 00 | Setup and tooling | 13 | full \| `references/lessons/00-setup-and-tooling.md` |
+| 00 | Setup and tooling | 13 | full | `references/lessons/00-setup-and-tooling.md` |
 | 01 | Math foundations | 22 | partial | `references/lessons/01-math-foundations.md` |
-| 02 | ML fundamentals | 21 | full \| `references/lessons/02-ml-fundamentals.md` |
+| 02 | ML fundamentals | 21 | full | `references/lessons/02-ml-fundamentals.md` |
 | 03 | Deep learning core | 13 | partial | `references/lessons/03-deep-learning-core.md` |
-| 04 | Computer vision | 28 | full \| `references/lessons/04-computer-vision.md` |
+| 04 | Computer vision | 28 | full | `references/lessons/04-computer-vision.md` |
 | 05 | NLP, foundations to advanced | 29 | partial | `references/lessons/05-nlp-foundations-to-advanced.md` |
-| 06 | Speech and audio | 17 | full \| `references/lessons/06-speech-and-audio.md` |
+| 06 | Speech and audio | 17 | full | `references/lessons/06-speech-and-audio.md` |
 | 07 | Transformers deep dive | 16 | partial | `references/lessons/07-transformers-deep-dive.md` |
-| 08 | Generative AI | 15 | full \| `references/lessons/08-generative-ai.md` |
-| 09 | Reinforcement learning | 12 | full \| `references/lessons/09-reinforcement-learning.md` |
+| 08 | Generative AI | 15 | full | `references/lessons/08-generative-ai.md` |
+| 09 | Reinforcement learning | 12 | full | `references/lessons/09-reinforcement-learning.md` |
 | 10 | LLMs from scratch | 24 | partial | `references/lessons/10-llms-from-scratch.md` |
 | 11 | LLM engineering | 17 | partial | `references/lessons/11-llm-engineering.md` |
-| 12 | Multimodal AI | 25 | full \| `references/lessons/12-multimodal-ai.md` |
+| 12 | Multimodal AI | 25 | full | `references/lessons/12-multimodal-ai.md` |
 | 13 | Tools and protocols (MCP, skills) | 45 | partial | `references/lessons/13-tools-and-protocols.md` |
 | 14 | Agent engineering | 54 | partial | `references/lessons/14-agent-engineering.md` |
 | 15 | Autonomous systems | 22 | partial | `references/lessons/15-autonomous-systems.md` |
 | 16 | Multi-agent and swarms | 25 | partial | `references/lessons/16-multi-agent-and-swarms.md` |
 | 17 | Infrastructure and production | 29 | partial | `references/lessons/17-infrastructure-and-production.md` |
 | 18 | Ethics, safety, alignment | 30 | partial | `references/lessons/18-ethics-safety-alignment.md` |
-| 19 | Capstone projects | 85 | full \| `references/lessons/19-capstone-projects.md` |
+| 19 | Capstone projects | 85 | full | `references/lessons/19-capstone-projects.md` |
 
 ## Other references
 
