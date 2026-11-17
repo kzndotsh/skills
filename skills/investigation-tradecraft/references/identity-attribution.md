@@ -21,7 +21,7 @@ No single selector settles identity. Strength comes from several independent sig
 | Signal | What it tends to show | Watch for |
 | --- | --- | --- |
 | Same email on two accounts | The same account holder at the time of use | Services that accept unverified addresses; providers recycling addresses; expired domains re-registered; shared family inboxes |
-| Different emails, same unique and complex password | Very probably the same person | A password from a public leak reused by someone else; shared credentials in a household or group |
+| Different emails, same unique and complex password | A strong link; reaching `probable` takes corroboration | A password from a public leak reused by someone else; shared credentials in a household or group |
 | Password variants on one base word | A strong hint when the base word is uncommon | Common words and patterns that thousands of people choose independently |
 | Different emails, common password | Little | — |
 | Same recovery email or phone | A strong link | Placeholder values; a family or shared contact |
@@ -98,10 +98,10 @@ Short and common handles collide all the time. Distinctive handles still get squ
 | Two domains resolve to the same IP | They were hosted on the same address at that time | Same operator. Shared hosting, CDNs and reverse proxies put thousands of unrelated sites on one IP |
 | Passive DNS record | That resolution was observed at that time | That it resolves now, or that every resolution was seen |
 | Passive DNS absence | Little; sensor coverage is partial | That the domain was never used |
-| Same WHOIS registrant details | A strong link if the details are specific and unredacted | Anything when privacy-proxied, a reseller default, or a placeholder |
+| Same WHOIS registrant details | A strong link between domains if the details are specific and unredacted | Who operates them. Fraud and phishing registrants are often stolen identities or victims, so an unredacted name is a lead to check, and possibly a person to protect. Proves nothing when privacy-proxied, a reseller default or a placeholder |
 | Same registrar, same registration day | Weak co-occurrence | Same operator; bulk and promotional registrations cluster by day |
 | Same TLS certificate on two hosts | The same certificate holder or platform | Same operator, if it's a shared CDN or multi-domain hosting cert |
-| Same analytics, ad or tracking id | Someone with that account installed it | Current control; ids are copied with templates |
+| Same analytics, ad or tracking id | Someone with that account installed it | Current control; ids are copied with templates, and an id baked into a phishing or scam kit may belong to the kit's author or seller, not the operator |
 | Same SSH host key | The same key material, from one operator or one cloned image | Same operator, if it comes from a provider's base image |
 | Same JARM or JA4 fingerprint | The same server software and configuration | Same operator; common stacks share fingerprints, so it narrows rather than links |
 | Same favicon hash, template or error page | The same software or kit | Same operator; kits are sold and reused |

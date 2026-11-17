@@ -40,7 +40,7 @@ Licensing doesn't guarantee vetting. The UK, for example, legislated for PI lice
 
 Reliability and permissibility are separate grades. Data from regulated sources, and broker products built on them, can usually be used only for listed purposes. Regulated sources include motor-vehicle, credit, telecom and financial records. Some US examples:
 
-- **DPPA (18 U.S.C. §2721).** It gives licensed investigators no purpose of their own: they can use motor-vehicle data only for purposes the Act already allows. Recipients keep records of who received the data and why.
+- **DPPA (18 U.S.C. §2721).** It gives licensed investigators no purpose of their own: they can use motor-vehicle data only for purposes the Act already allows. A recipient who resells or rediscloses the data must keep records for five years of each onward recipient and its permitted purpose.
 - **FCRA (15 U.S.C. §1681a).** It can turn an investigator's report into a "consumer report", with all the obligations that brings, for example interviews with neighbours used in a hiring decision. Workplace-misconduct investigations have a conditional carve-out.
 - **Postal forwarding data** is, by secondary accounts, limited to purposes such as service of process.
 
@@ -79,7 +79,7 @@ Material like this is best treated as tainted until its route is known, and its 
 ## Recording, interception and tracking
 
 - **Recording consent varies by place.** About a dozen US states require every party's consent to record a conversation, and some treat phone calls and in-person conversations differently. Where the parties are in different places, the stricter rule may govern.
-- **Accessing someone's voicemail or message store is interception, not research**, even with a default PIN. A private investigator and a journalist at the News of the World pleaded guilty in 2007 to intercepting voicemail.
+- **Accessing someone's voicemail or message store is interception, not research**, even with a default PIN. A private investigator and a journalist at the News of the World pleaded guilty in 2006 to intercepting voicemail, and were jailed in 2007.
 - **GPS trackers** are restricted in many places.
 
 When recording or tracking is on the table, it helps to name which rules might apply and leave the decision with the human.
@@ -98,6 +98,8 @@ Findings answer to the evidence, not to whoever is paying. In England and Wales,
 - fees tied to an outcome;
 - a client asking for "something on" a person;
 - requests to drop exculpatory material.
+
+When one of these signs appears, it's worth naming it to the human and tying the work back to the decision it serves. Personal material wanted as leverage rather than for that decision (health, family, sexuality, old debts) is out of scope, and pressing someone with it can amount to coercion or blackmail.
 
 Anything that may reach a court is worth writing as if under oath:
 - what was done, seen and inferred;

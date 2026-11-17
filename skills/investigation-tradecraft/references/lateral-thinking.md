@@ -69,7 +69,7 @@ A running "doesn't fit" list kept alongside the findings is where the next break
 - **Switch modality.**
   - Image to text: OCR, signs, shop names, plug types, licence plates.
   - Time to place: posting hours to time zone.
-  - Username to image: reverse-search the avatar, unless it may show a child (that is the human's call).
+  - Username to image: reverse-search the avatar, unless it may show a child, in which case it stays out of image services (see `SKILL.md`). Face search on adults is the human's decision.
   - Text to time: archive captures.
 - **Change the unit of analysis.** Move from person to account to device to infrastructure to organisation, and back. A dead end at one level is often open at another.
 - **Change the source class.** When the open web runs dry, other classes include:
@@ -95,7 +95,7 @@ Pivots generate leads rather than proof. Those marked **active** can notify the 
 | Image backgrounds and document metadata | Place, device, software, author name, internal paths | Metadata is easily stripped or edited. Media that may be illegal stays unfetched (see `SKILL.md`) |
 | Old usernames and cached avatars via archives | Earlier identities, real-name periods before a rename | Archive captures are dated, and a reused handle may belong to someone else |
 | Public reviews, wishlists, payment-app feeds, PGP keyservers | Interests, approximate location, contacts, linked emails | Practitioner lore not checked against a primary guide here; platform behaviour changes |
-| Registration and password-reset flows | Partial emails or phone numbers on file | **Active.** Can trigger notifications, alerts or account locks, and may breach terms or law |
+| Registration and password-reset flows | Partial emails or phone numbers on file | **Active**, and the human's call. Can trigger notifications, alerts or account locks, and may breach terms or law |
 
 ## Pitfalls of creativity
 

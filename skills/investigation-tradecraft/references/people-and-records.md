@@ -39,7 +39,7 @@ A locate is a claim about one person at one place at one time. Skip tracers tend
 
 1. **The subject's identifier set**: names and variants, date of birth, known phones and emails, vehicles, prior addresses.
 2. **A dated address history**, with each entry marked by its status:
-   - confirmed (seen in an original record or verified);
+   - on record (seen in an original record; an address of record, not proof of residence);
    - corroborated (several independent sources agree);
    - reported (a single broker or tip);
    - conflicted.
@@ -66,7 +66,7 @@ A company filing shows who was declared, not who controls the company.
   - payment flows;
   - addresses or officers shared with other companies.
 - **Registry data quality varies.** UK Companies House only began verifying the identity of directors and people with significant control in November 2025, so earlier filings are self-declared. Many registries still verify nothing.
-- **Sanctions exposure depends on aggregated ownership through the chain**, not just on whether a name appears on a list. Under OFAC's 50% rule:
+- **Sanctions exposure depends on aggregated ownership (and, under EU and UK regimes, control) through the chain**, not just on whether a name appears on a list. Under OFAC's 50% rule:
   - holdings of blocked persons are added together;
   - the test is ownership, not control;
   - OFAC publishes no list of the entities the rule captures.

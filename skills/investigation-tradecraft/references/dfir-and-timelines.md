@@ -15,6 +15,7 @@ How investigators reason about device and log forensics, building timelines, and
 
 - **Every action on a live system changes it.** Running a command writes to memory, logs, shell history and access times. A record of each command (time, tool, version, purpose) is what lets you explain its effect later (ACPO principles 2 and 3).
 - **Volatile data goes first.** RFC 3227 gives the order of volatility as: registers and cache; routing table, ARP cache, process table and memory; temporary files; disk; remote logs; physical configuration; archival media.
+- **Running commands on a live or compromised host is the human's decision**, including memory capture. The agent's useful role is to propose the order of collection and log each command.
 - **Images over live looks, where possible.** Analysis on a hashed copy leaves the original intact. Pulling the plug or rebooting loses memory, which may hold encryption keys, running malware and network connections, so that trade-off is a judgment call for the human.
 - **A compromised host's own tools can lie.** Rootkits hide from `ps`, `ls` and `netstat`, which is why known-good binaries or offline analysis are preferred.
 
@@ -65,7 +66,7 @@ The traces of deletion are often more visible than the deleted thing. They are f
 - Shadows give a sun angle, and a sun-position calculator turns that into a time window for a known place and date. It gives a window, not a time.
 - Weather history (cloud, rain, snow), visible events (construction stages, shop signage, vehicles, posters) and seasonal vegetation narrow the date range.
 - Independent clues combine into a window whose assumptions are worth stating (the place, the direction the camera faces, whether the image is mirrored).
-- The upload time bounds the capture time from above only. Re-uploads, and platforms that strip or rewrite metadata, break even that.
+- The upload time bounds the capture time from above, provided it's the real upload time. Some platforms allow backdated posts or display an edit or repost time instead. The earliest copy found gives the tightest bound.
 
 ## Sources
 

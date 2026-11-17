@@ -35,7 +35,7 @@ Heuer's eight steps:
 2. **List the significant evidence and arguments**, including assumptions and the absence of things you'd expect to see.
 3. **Build a matrix**, with hypotheses across and evidence down, marking each cell consistent, inconsistent, or not applicable.
 4. **Refine it.** Reword or merge hypotheses, and set aside evidence consistent with every hypothesis, since it can't help choose between them.
-5. **Draw tentative conclusions by trying to disprove hypotheses rather than prove them.** The strongest hypothesis is the one with the least evidence against it, not the most evidence for it.
+5. **Draw tentative conclusions by trying to disprove hypotheses rather than prove them.** The strongest hypothesis is the one with the least weight of evidence against it, not the most evidence for it. Two cautions apply. A vague catch-all hypothesis is hard to contradict, so its low score isn't support. And a single damning item deserves a check for planting before it eliminates anything.
 6. **Test sensitivity.** Ask which few items the conclusion depends on, and what changes if one of them is wrong, misleading or planted.
 7. **Report all the hypotheses** with their relative likelihood, not just the leader.
 8. **Identify signposts**: observations that would shift the ranking later.
@@ -88,7 +88,7 @@ Related points:
 - **Base rates come first.** How common is this kind of match across everyone who could have produced it? Starting from that outside view and then adjusting avoids being anchored by the vivid case.
 - **The conditional can't be flipped.** "Only 1 in 10,000 accounts share this trait" is not "a 1 in 10,000 chance it's someone else". In a pool of ten million accounts, about a thousand share it.
 - **Searching a large pool for the best match always finds a close one.** A face, handle or fingerprint picked as the closest of millions is expected to look similar by chance. The Mayfield misidentification began with exactly this kind of database search.
-- **Updates are usually incremental.** One item rarely justifies a jump from "unlikely" to "confirmed". An inconvenient item still deserves its weight.
+- **Updates are usually incremental.** One item rarely justifies a jump from "unlikely" to "almost certain". An inconvenient item still deserves its weight.
 
 ## Sequencing what you look at (Linear Sequential Unmasking)
 

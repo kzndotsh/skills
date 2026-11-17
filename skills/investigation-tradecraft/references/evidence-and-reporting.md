@@ -66,7 +66,7 @@ Logs and drafts may be read by opposing counsel or the subject in litigation, so
 - **Passive collection leaves the least trace.** Contact, follows, friend requests, likes, read and view receipts, profile-visitor lists, and link previews fetched from a target-controlled server can all notify the subject. So can port scans, vulnerability probes, registration flows and password-reset flows. These active steps are decisions for the human.
 - **A block aimed at you is a decision point, not a routing problem.** Getting around a login wall, IP ban, geoblock or cease notice can be unauthorised access.
 - **Deconfliction.** Another agency or team may already be working the target. That is worth checking before any active step or report.
-- **Know how your traffic leaves.** Unless verified, traffic may come from an attributable address. Recon that touches the target's own servers (DNS, WHOIS, page fetches) is usually routed through infrastructure that doesn't point back to the investigator.
+- **Know how your traffic leaves.** Unless verified, traffic may come from an attributable address. Recon that touches the target's own servers (DNS, WHOIS, page fetches) is usually routed through infrastructure that doesn't point back to the investigator. An agent that can't see or choose its egress is better off saying so, and leaving those requests to the human.
 - **Separate identities.** Investigation browsing kept apart from personal accounts, password managers and email avoids cross-contamination. Recording any research account used makes captures interpretable later.
 - **Third-party services see what you ask them.** Searches, reverse-image lookups, URL scanners and archive requests reveal your interest, and some services publish submissions. A narrower route is often available for sensitive names and private URLs.
 - **Terms of service and law.** Breaching a site's terms carries legal risk. That decision sits with the human.
@@ -76,19 +76,20 @@ Logs and drafts may be read by opposing counsel or the subject in litigation, so
 - **Suspected child sexual abuse material is not downloaded, opened, rendered, screenshotted, saved or forwarded.** Rendering a page caches its images, which in some jurisdictions counts as making a copy, so suspected sites call for text-only fetching with media and scripts off. The URL, the time and the surrounding text are what the human needs to report it. Reporting routes include the NCMEC CyberTipline in the US, the IWF in the UK, the hotline in the hosting country, and the platform itself. When it's unclear whether something qualifies, asking is better than opening.
 - **Images that may show a child stay out of reverse-image and face-search services, and image searches on offender terms are off the table.**
 - **Offender vocabulary is best sourced from the human or vetted LE and NGO references.** Building it by browsing offender spaces is not appropriate.
-- **In cases that may involve children or illegal content, media stays unfetched.** Record the URL or filename; the human decides on any specific item.
+- **In cases that may involve children or illegal content, media stays unfetched.** Record the URL or filename. The human decides on any specific item, except suspected CSAM, which stays unfetched whoever names it.
 - **Graphic material.** A warning and a text description usually serve better than surfacing it directly.
 
 ## Leaked and hacked data
 
 - **Authenticity first.** Look for internal consistency, plausible id sequences and timestamps, and sample rows that match known accounts. Recycled combo lists relabelled as new breaches are common.
+- **Unknown content.** A dump can hold illegal media even in a case unrelated to children. Attachments and media are best left unopened until the human has decided on legality.
 - **Legality varies.** Possessing or using some leaked or hacked data is unlawful in some jurisdictions; that is the human's call.
 - **Custody.** A note of how the data arrived (purchased, downloaded from a forum, an unsolicited contribution, a provider lookup) belongs with it.
 - **Weight.** Material with custody problems works best as a lead until it is authenticated or independently confirmed. Telling a recipient where a lead originally came from is generally better than hiding it, since they may need to know.
 
 ## Data minimisation
 
-Collecting what is relevant to a clear question, and keeping bystanders' personal data out of notes and work product, reduces exposure and disclosure burdens. Minimisation concerns what is stored and shared. It is not a reason to drop a lawful lead on someone whose involvement is the open question.
+Collecting what is relevant to a clear question, and keeping bystanders' personal data out of notes and work product, reduces exposure and disclosure burdens. Minimisation concerns what is stored and shared. It is not a reason to drop a lawful lead on someone whose involvement is the open question. Nor is that principle a licence for bulk collection on everyone who matches a filter. A bulk query is better preceded by a stated purpose, and its output kept to what that purpose needs.
 
 ## Writing findings
 
@@ -107,8 +108,12 @@ Habits that make a write-up checkable:
 ## Referrals, reports and takedowns
 
 - **Safeguarding doesn't wait for certainty.** If anything suggests someone is in immediate danger, the human needs to know straight away. Hotline and CyberTipline reports run on reasonable suspicion, and safeguarding facts (what was seen, where, when) can be reported with their uncertainty stated.
-- **Order matters: preserve, refer, then take down.** An abuse report to a host or registrar can destroy evidence and alert the subject. A preservation request (for example 18 U.S.C. §2703(f) in the US, or the local equivalent) may need to come first; the human decides.
+- **Order usually matters: preserve, refer, then take down.**
+  - An abuse report to a host or registrar can destroy evidence and alert the subject.
+  - A preservation step may need to come first. In the US, law enforcement can use 18 U.S.C. §2703(f); private parties usually rely on a litigation-hold or preservation letter, or ask law enforcement.
+  - The exceptions are imminent risk and CSAM, where the report goes first. Hotline and CyberTipline reports trigger preservation themselves.
 - **Attribution claims in referrals and publications** are usually limited to the best-supported ones, each checkable from the cited evidence. IPs serve as leads for legal process rather than location proof.
+- **Claims that can't be traced to an openable source** belong in a clearly marked unverified section of a referral, or are left out. This applies especially to claims inherited from someone else's dossier.
 - **Material with custody problems.** It is better to rest claims on the independent source, while disclosing where the lead started.
 - **Credentials** (passwords, tokens, hashes) are kept to a minimum in anything that leaves the team.
 - **Re-check before sending.** Hashes and live state are worth verifying close to sending.

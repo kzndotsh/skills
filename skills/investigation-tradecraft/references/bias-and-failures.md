@@ -16,7 +16,7 @@ The failure modes that keep recurring, cases that illustrate them, and the habit
 | **Tunnel vision / confirmation bias** | Each new fact read as support; contrary facts dismissed as noise | Several hypotheses written down before collecting, including "someone else / nobody we know of"; ACH; treating evidence against the frame as the most informative |
 | **Anchoring** | The first estimate or suspect sets the range for later ones | A base rate or independent estimate before looking at case specifics |
 | **Premature closure** | Stopping at the first explanation that fits | Asking what else would produce the same evidence, and whether every record is actually accounted for |
-| **The dismissal error** | Ruling someone out ("unrelated", "coincidence", "IP reassigned") without evidence | Treating a dismissal as a claim that needs the same evidence as a link; an open question when neither side is shown |
+| **The dismissal error** | Ruling someone out ("unrelated", "coincidence", "IP reassigned") without evidence | Once something specific ties the person to the case, treating the dismissal as a claim that needs evidence; an open question when neither side is shown. Without such a tie, the base rate already favours "unrelated" |
 | **Clean-front fallacy** | A real job or respectable persona taken as clearance | Asking whether the persona explains the specific anomaly, and keeping the two as separate facts until it does |
 | **Surface reading as clearance** | Finding nothing on a subject's public blog or profile and concluding they're uninvolved | Asking whether that source would show it if the subject were guilty and careful, then looking where it would appear: other personas, archives, breach data, metadata, associates |
 | **Ignoring the subject's own OpSec** | Expecting plain evidence from a population that compartmentalises, uses coded language and scrubs history | Modelling the subject as competent (red hat): which traces they'd hide, and which they couldn't avoid leaving |
@@ -42,6 +42,8 @@ Silence on a subject's curated public surface usually says little (see "Subjects
 - an interest described only in euphemism;
 - a profile much cleaner than usual for that platform and type of account;
 - a persona that appears fully formed, with no earlier history.
+
+These patterns also fit privacy-minded innocent people. On their own they can't be disproved, and chasing them becomes profile-fit suspicion. They're worth following only when something specific already ties the subject to the case. The reverse also holds: a sanity-checked search of the places where the thing would appear if true, coming back empty, is evidence in the subject's favour.
 
 ## Cases and lessons
 

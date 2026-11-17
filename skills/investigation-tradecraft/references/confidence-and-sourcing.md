@@ -60,7 +60,7 @@ Words alone ("strong link", "likely the same") drift in meaning over a long inve
 | Tier | Typical basis |
 | --- | --- |
 | confirmed | Cryptographic proof such as a signed challenge; an official record (registry, court or company filing); a unique-identifier match on the platform itself; or several independent chains that each hold up alone |
-| probable | A shared unique secret (password, recovery address) plus corroborating metadata, or two independent chains with no live counter-hypothesis |
+| probable | A shared unique secret (password, recovery address) plus corroborating metadata, or two independent chains; in either case with no live counter-hypothesis |
 | possible | One strong chain, with counter-hypotheses considered but not eliminated |
 | unverified | Circumstantial evidence, a single data point, a common-name match, or AI output nobody has checked |
 
@@ -68,7 +68,7 @@ Whatever scheme you use, some points carry over:
 - **Tier names are labels, not probabilities.** "Probable" as a tier and "probable" as an ICD term mean different things; keeping them visibly distinct avoids confusion.
 - **Independence is about origin.** Three chains that all start from one breach row are one chain.
 - **An official record proves a filing, not control.** Nominee directors and borrowed identities exist.
-- **Linking two accounts is not identifying a person.** That step usually needs a chain ending in a real-world record or a self-identification.
+- **Linking two accounts is not identifying a person.** Grading account-to-account and account-to-person claims separately avoids conflating them. A signature can settle the first. The second needs a record tying the identifier itself to the person, or a verified self-identification; a filing that merely names someone isn't that.
 
 ## Grading sources and information separately
 
