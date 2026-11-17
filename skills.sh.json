@@ -22,6 +22,13 @@
       "skills": [
         "arctic-shift"
       ]
+    },
+    {
+      "title": "Investigation",
+      "description": "Reasoning and evidence discipline for OSINT, cyber and DFIR work.",
+      "skills": [
+        "investigation-tradecraft"
+      ]
     }
   ]
 }
