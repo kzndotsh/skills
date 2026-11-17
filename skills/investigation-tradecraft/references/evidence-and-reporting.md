@@ -59,6 +59,8 @@ Without them, "no evidence of X" can't be said honestly.
 
 Writing down the objective, the questions, and what is known versus assumed before starting a search makes later drift visible.
 
+Logs and drafts may be read by opposing counsel or the subject in litigation, so neutral wording (observations, then labelled inferences, no speculation about people) protects both the case and the people named. See `references/legal-and-ethics.md`.
+
 ## OpSec and collection posture
 
 - **Passive collection leaves the least trace.** Contact, follows, friend requests, likes, read and view receipts, profile-visitor lists, and link previews fetched from a target-controlled server can all notify the subject. So can port scans, vulnerability probes, registration flows and password-reset flows. These active steps are decisions for the human.

@@ -1,6 +1,6 @@
 ---
 name: investigation-tradecraft
-description: Analytic tradecraft for OSINT, cyber-threat and DFIR investigations - testing identity links and dismissals, competing hypotheses, confidence and source grading, provable negatives, lateral thinking, evidence handling, timelines, OpSec and defensible reporting. Use when attributing an account, alias or infrastructure to a person or group, deciding whether two identities are the same, ruling someone in or out, weighing breach, passive-DNS, WHOIS or scraped data, getting a stuck case moving, writing findings, an abuse report or a law-enforcement referral, or briefing subagents on investigative work.
+description: Analytic tradecraft for OSINT, cyber-threat and DFIR investigations - testing identity links and dismissals, competing hypotheses, confidence and source grading, provable negatives, lateral thinking, records and due diligence, evidence handling, timelines, legal and ethical limits, OpSec and defensible reporting. Use when locating a person, checking records or company ownership, attributing an account, alias or infrastructure to a person or group, deciding whether two identities are the same, ruling someone in or out, weighing breach, passive-DNS, WHOIS or scraped data, getting a stuck case moving, writing findings, an abuse report or a law-enforcement referral, or briefing subagents on investigative work.
 ---
 
 # Investigation Tradecraft
@@ -20,6 +20,8 @@ A few points are legal or safety limits, not tradecraft preferences. When one ap
 - **Suspected child sexual abuse material is not downloaded, opened, rendered, screenshotted, saved or forwarded.** Rendering a page caches its images, which can itself be an offence, so suspected sites call for text-only fetching with media and scripts off. The URL and surrounding text are enough for the human to report. When it's unclear whether something qualifies, ask rather than open it.
 - **Images that may show a child stay out of reverse-image and face-search services, and image searches on offender terms are off the table.** Face recognition on adults is a privacy and legal decision for the human too.
 - **Found credentials, tokens and session cookies are for matching, not for logging in.** Testing them, or confirming an account through a password-reset or 2FA flow, is unauthorised access whatever the source, and it taints the case.
+- **Locating someone is a decision about who gets their address.** Before a locate, the requester's identity, relationship to the subject and purpose matter as much as the method. Signs of an estranged partner, a protective order, threats, or a purpose that doesn't fit the request are for the human to weigh before any location is released (`references/legal-and-ethics.md`).
+- **Deception to gain access is the human's call.** That covers pretext calls, posing as the account holder, and friend or follow requests from a persona. Some kinds, such as pretexting for financial or phone records, are crimes in themselves.
 - **Active steps belong to the human.** Contacting or notifying the subject, port scans and vulnerability probes, and getting around a block aimed at you (login wall, IP ban, geoblock, cease notice) are decisions for them.
 - **In cases that may involve children or illegal content, media and attachments are left unfetched** unless the human names the specific item.
 
@@ -171,6 +173,8 @@ A subagent knows only its brief, and an agent given your hypothesis tends to han
 | Checking your own reasoning; a conclusion feels obvious; about to clear or name someone | `references/bias-and-failures.md` |
 | Capturing evidence; keeping a log; OpSec; harmful content; leaked data; writing a report, referral or takedown; correcting an error | `references/evidence-and-reporting.md` |
 | Device or log forensics; building a timeline; geolocating or chronolocating media | `references/dfir-and-timelines.md` |
+| Checking a broker or database hit against the original record; locating a person; company ownership, nominees, sanctions, adverse media; scoping a client job; preparing for interviews or surveillance | `references/people-and-records.md` |
+| A locate request; using regulated data (vehicle, credit, phone, financial); personas or pretexts; records from a vendor or client; recording or tracking; notes that may be discoverable; client pressure or conflicts; writing a fact report | `references/legal-and-ethics.md` |
 
 ## Cautions
 
